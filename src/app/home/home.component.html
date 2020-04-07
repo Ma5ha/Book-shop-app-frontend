@@ -1,7 +1,9 @@
 <!--first carousel-->
 <div class="owl">
     <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide [width]="1100" *ngFor="let slide of slides"><img src={{slide.image}}> </ng-template>
+        <ng-template carouselSlide [width]="1100" *ngFor="let slide of slides"><img src={{slide.image}}>
+            <app-button buttonName="shop books" klass="yellow-btn"></app-button>
+        </ng-template>
 
     </owl-carousel-o>
 </div>
@@ -43,6 +45,11 @@
 </div>
 
 
+
+
+
+
+
 <footer>
     <div class="col-md-6">
         <div class="share align-middle">
@@ -51,6 +58,7 @@
             <span class="twitter"><i class="fa fa-twitter"></i></span>
             <span class="pinterest"><i class="fa fa-pinterest"></i></span>
             <span class="google"><i class="fa fa-google-plus"></i></span>
+
         </div>
     </div>
 </footer>

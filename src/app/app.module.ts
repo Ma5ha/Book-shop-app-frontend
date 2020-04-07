@@ -11,7 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecommendedBooksComponent } from './home/recommended-books/recommended-books.component';
-import { AboutSectionComponent } from './home/about-section/about-section.component'
+import { AboutSectionComponent } from './home/about-section/about-section.component';
+import { ButtonComponent } from './home/button/button.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { AboutSectionComponent } from './home/about-section/about-section.compon
     LayoutComponent,
     HomeComponent,
     RecommendedBooksComponent,
-    AboutSectionComponent
+    AboutSectionComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserAnimationsModule,
