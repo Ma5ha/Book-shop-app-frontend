@@ -7,14 +7,21 @@ import { NavbarComponent } from './app/navbar/navbar.component';
 import { LayoutComponent } from './app/layout/layout.component';
 import { HomeComponent } from './home/home.component';
 
+// npm carousel- owl
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RecommendedBooksComponent } from './home/recommended-books/recommended-books.component'
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LayoutComponent,
-    HomeComponent
+    HomeComponent,
+    RecommendedBooksComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    CarouselModule,
     BrowserModule,
     AppRoutingModule
   ],

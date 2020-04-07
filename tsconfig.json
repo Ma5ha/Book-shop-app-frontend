@@ -5,7 +5,7 @@
     "paths": {
       "@app/*": [
         "src/app/*",
-      ]
+      ],
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
