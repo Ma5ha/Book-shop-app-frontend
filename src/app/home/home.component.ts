@@ -10,9 +10,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class HomeComponent {
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
+    mouseDrag: true,
+
     dots: true,
     navSpeed: 700,
     items: 1,

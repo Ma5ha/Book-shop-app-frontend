@@ -10,14 +10,16 @@ import { HomeComponent } from './home/home.component';
 // npm carousel- owl
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RecommendedBooksComponent } from './home/recommended-books/recommended-books.component'
+import { RecommendedBooksComponent } from './home/recommended-books/recommended-books.component';
+import { AboutSectionComponent } from './home/about-section/about-section.component'
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LayoutComponent,
     HomeComponent,
-    RecommendedBooksComponent
+    RecommendedBooksComponent,
+    AboutSectionComponent
   ],
   imports: [
     BrowserAnimationsModule,
