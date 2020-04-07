@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { dummyText } from './'
 
 
 @Component({
@@ -34,6 +35,16 @@ export class HomeComponent {
     image: "../../assets/owl/slide3.jpg"
   },
   ]
+
+  dummyText = [{
+    text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and
+  typesetting industry.
+  Lorem Ipsum has been the book.`,
+    subject: "Jane Doe",
+    place: "US",
+    image: "../../assets/owl/slide3.jpg"
+  },]
 
 
 

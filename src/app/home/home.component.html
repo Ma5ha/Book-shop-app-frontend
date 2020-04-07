@@ -1,13 +1,55 @@
-<p>home works!</p>
-
-
-
+<!--first carousel-->
 <owl-carousel-o [options]="customOptions">
     <ng-template carouselSlide *ngFor="let slide of slides"><img src={{slide.image}}> </ng-template>
 
 </owl-carousel-o>
+
+
 <app-recommended-books></app-recommended-books>
 <!--about section here-->
 
 <app-about-section></app-about-section>
+
+
 <app-recommended-books></app-recommended-books>
+
+
+<div class="left-quote">
+    <img src="../../assets/about section/left-quote.png" alt="quote">
+</div>
+
+
+<owl-carousel-o [options]="customOptions">
+
+    <ng-template carouselSlide *ngFor="let object of dummyText">
+
+        <div class="item">
+            <h3>{{object.text}}</h3>
+        </div>
+
+        <div class="box-user">
+            <h4 class="author">{{object.subject}}</h4>
+            <span class="country">{{object.place}}</span>
+        </div>
+
+    </ng-template>
+
+</owl-carousel-o>
+
+
+<div class="right-quote">
+    <img src="../../assets/about section/right-quote.png" alt="quote">
+</div>
+
+
+<footer>
+    <div class="col-md-6">
+        <div class="share align-middle">
+            <span class="fb"><i class="fa fa-facebook-official"></i></span>
+            <span class="instagram"><i class="fa fa-instagram"></i></span>
+            <span class="twitter"><i class="fa fa-twitter"></i></span>
+            <span class="pinterest"><i class="fa fa-pinterest"></i></span>
+            <span class="google"><i class="fa fa-google-plus"></i></span>
+        </div>
+    </div>
+</footer>
