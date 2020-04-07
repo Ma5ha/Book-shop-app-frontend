@@ -16,6 +16,9 @@ export class HomeComponent {
     dots: true,
     navSpeed: 700,
     items: 1,
+    autoWidth: true
+
+
 
 
 

@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+.owl-dot.active  span{
+    background-color: #ff9700 !important;
+}

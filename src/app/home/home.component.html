@@ -1,9 +1,10 @@
 <!--first carousel-->
-<owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide *ngFor="let slide of slides"><img src={{slide.image}}> </ng-template>
+<div class="owl">
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide [width]="1100" *ngFor="let slide of slides"><img src={{slide.image}}> </ng-template>
 
-</owl-carousel-o>
-
+    </owl-carousel-o>
+</div>
 
 <app-recommended-books></app-recommended-books>
 <!--about section here-->
