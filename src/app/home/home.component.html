@@ -26,40 +26,41 @@
 
 <app-about-section></app-about-section>
 
-<app-button buttonName="shop books" klass="blue-btn"></app-button>
-
 <app-recommended-books></app-recommended-books>
 
-
-<div class="left-quote">
-    <img src="../../assets/about section/left-quote.png" alt="quote">
-</div>
+<section class="testimonial-sec">
+    <div class="container">
 
 
-<owl-carousel-o [options]="customOptions">
-
-    <ng-template carouselSlide *ngFor="let object of dummyText">
-
-        <div class="item">
-            <h3>{{object.text}}</h3>
+        <div class="left-quote">
+            <img src="../../assets/about-section/left-quote.png" alt="quote">
         </div>
 
-        <div class="box-user">
-            <h4 class="author">{{object.subject}}</h4>
-            <span class="country">{{object.place}}</span>
+
+        <owl-carousel-o [options]="customOptions">
+
+            <ng-template carouselSlide *ngFor="let object of dummyText">
+
+                <div class="item">
+                    <h3>{{object.text}}</h3>
+
+
+                    <div class="box-user">
+                        <h4 class="author">{{object.subject}}</h4>
+                        <span class="country">{{object.place}}</span>
+                    </div>
+                </div>
+            </ng-template>
+
+        </owl-carousel-o>
+
+
+        <div class="right-quote">
+            <img src="../../assets/about-section/right-quote.png" alt="quote">
         </div>
 
-    </ng-template>
-
-</owl-carousel-o>
-
-
-<div class="right-quote">
-    <img src="../../assets/about section/right-quote.png" alt="quote">
-</div>
-
-
-
+    </div>
+</section>
 
 
 

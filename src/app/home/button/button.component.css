@@ -47,7 +47,8 @@ button {
   
   .black-btn {
     background: #252525;
-    border: 2px solid #252525; }
+    border: 2px solid #252525; 
+    color: #ccc;}
     .black-btn:hover {
       background: transparent;
       color: #252525; }
