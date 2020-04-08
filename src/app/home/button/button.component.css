@@ -38,7 +38,9 @@ button {
     background: #0072bc;
     border: 2px solid #0072bc;
     font-size: 16px;
-    font-weight: 300; }
+    font-weight: 300; 
+    color: #fff;
+  }
     .blue-btn:hover {
       background: #fff;
       color: #0072bc; }

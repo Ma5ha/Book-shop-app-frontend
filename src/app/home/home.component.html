@@ -1,18 +1,32 @@
 <!--first carousel-->
-<div class="owl">
-    <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide [width]="1100" *ngFor="let slide of slides"><img src={{slide.image}}>
-            <app-button buttonName="shop books" klass="yellow-btn"></app-button>
-        </ng-template>
+<section class="slider">
+    <div class="container">
 
-    </owl-carousel-o>
-</div>
+
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide [width]="1100" *ngFor="let slide of slides"><img src={{slide.image}}>
+                <div class="content">
+                    <div class="title">
+
+                        <h3>welcome to bookstore</h3>
+
+                        <h5>Discover the best books online with us</h5>
+
+                        <app-button buttonName="shop books" klass="yellow-btn"></app-button>
+                    </div>
+                </div>
+            </ng-template>
+
+        </owl-carousel-o>
+    </div>
+</section>
 
 <app-recommended-books></app-recommended-books>
 <!--about section here-->
 
 <app-about-section></app-about-section>
 
+<app-button buttonName="shop books" klass="blue-btn"></app-button>
 
 <app-recommended-books></app-recommended-books>
 
