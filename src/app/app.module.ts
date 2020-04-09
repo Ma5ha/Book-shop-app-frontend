@@ -13,7 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecommendedBooksComponent } from './home/recommended-books/recommended-books.component';
 import { AboutSectionComponent } from './home/about-section/about-section.component';
 import { ButtonComponent } from './home/button/button.component';
-import { OffersSectionComponent } from './offers-section/offers-section.component'
+import { OffersSectionComponent } from './home/offers-section/offers-section.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { OffersSectionComponent } from './offers-section/offers-section.componen
     RecommendedBooksComponent,
     AboutSectionComponent,
     ButtonComponent,
-    OffersSectionComponent
+    OffersSectionComponent,
+
   ],
   imports: [
     BrowserAnimationsModule,
