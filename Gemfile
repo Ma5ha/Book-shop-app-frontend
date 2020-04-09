@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
+gem 'devise_token_auth'
+gem 'omniauth'
+gem 'rack-cors', :require => 'rack/cors'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
