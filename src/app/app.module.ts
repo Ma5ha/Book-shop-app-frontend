@@ -14,6 +14,7 @@ import { RecommendedBooksComponent } from './home/recommended-books/recommended-
 import { AboutSectionComponent } from './home/about-section/about-section.component';
 import { ButtonComponent } from './home/button/button.component';
 import { OffersSectionComponent } from './home/offers-section/offers-section.component';
+import { FeaturesSecComponent } from './home/features-sec/features-sec.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { OffersSectionComponent } from './home/offers-section/offers-section.com
     AboutSectionComponent,
     ButtonComponent,
     OffersSectionComponent,
+    FeaturesSecComponent,
 
   ],
   imports: [
