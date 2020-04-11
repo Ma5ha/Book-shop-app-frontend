@@ -25,6 +25,7 @@ export class HomeComponent {
   }
 
 
+
   slides = [{
     id: 1,
     image: "../../assets/owl/slide1.jpg"
@@ -40,6 +41,16 @@ export class HomeComponent {
   ]
 
   dummyText = [{
+    text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and
+  typesetting industry.
+  Lorem Ipsum has been the book.`,
+    subject: "Jane Doe",
+    place: "US",
+    image: "../../assets/owl/slide3.jpg"
+
+  },
+  {
     text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and
   typesetting industry.
