@@ -5,11 +5,9 @@
 
     <ul class="nav justify-content-end">
 
-
-        <li class="nav-item" *ngFor="let item of navbarItems">
-            <a class="nav-link">{{item.routeName}}</a>
+        <li class="nav-item" *ngFor="let navItem of navbarItems">
+            <a class="nav-link" [routerLink]='navItem.routeLink'
+                routerLinkActive="router-link-active">{{navItem.routeName}}</a>
         </li>
-
-
     </ul>
 </div>
