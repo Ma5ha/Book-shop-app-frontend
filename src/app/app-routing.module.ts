@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from '@app/home/home.component'
+import { HomeComponent, UserPageComponent } from '@app/index'
+
 
 const routes: Routes = [{
   path: '',
   component: HomeComponent,
   pathMatch: 'full'
+},
+{
+  path: 'user',
+  component: UserPageComponent
 }
 
 ];

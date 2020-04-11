@@ -16,6 +16,7 @@ import { ButtonComponent } from './home/button/button.component';
 import { OffersSectionComponent } from './home/offers-section/offers-section.component';
 import { FeaturesSecComponent } from './home/features-sec/features-sec.component';
 import { BookItemComponent } from './home/recommended-books/book-item/book-item.component';
+import { UserPageComponent } from './user-page/user-page.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { BookItemComponent } from './home/recommended-books/book-item/book-item.
     OffersSectionComponent,
     FeaturesSecComponent,
     BookItemComponent,
+    UserPageComponent,
 
   ],
   imports: [
