@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent, UserPageComponent } from '@app/index'
+import { LoginComponent } from './user-page/login/login.component';
 
 
 const routes: Routes = [{
@@ -10,7 +11,14 @@ const routes: Routes = [{
 },
 {
   path: 'user',
-  component: UserPageComponent
+  component: UserPageComponent,
+  children: [{
+    path: '',
+    component: LoginComponent,
+    pathMatch: 'full'
+  },
+
+  ]
 }
 
 ];

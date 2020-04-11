@@ -1,4 +1,4 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component } from '@angular/core';
 import { navbarItem } from './index'
 
 @Component({
@@ -6,7 +6,7 @@ import { navbarItem } from './index'
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
 
   navbarItems: navbarItem[] = [
@@ -19,7 +19,5 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
 
 }

@@ -17,6 +17,7 @@ import { OffersSectionComponent } from './home/offers-section/offers-section.com
 import { FeaturesSecComponent } from './home/features-sec/features-sec.component';
 import { BookItemComponent } from './home/recommended-books/book-item/book-item.component';
 import { UserPageComponent } from './user-page/user-page.component';
+import { LoginComponent } from './user-page/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { UserPageComponent } from './user-page/user-page.component';
     FeaturesSecComponent,
     BookItemComponent,
     UserPageComponent,
+    LoginComponent,
 
   ],
   imports: [
