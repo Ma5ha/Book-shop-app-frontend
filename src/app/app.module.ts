@@ -18,6 +18,7 @@ import { FeaturesSecComponent } from './home/features-sec/features-sec.component
 import { BookItemComponent } from './home/recommended-books/book-item/book-item.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { LoginComponent } from './user-page/login/login.component';
+import { SignupComponent } from './user-page/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LoginComponent } from './user-page/login/login.component';
     BookItemComponent,
     UserPageComponent,
     LoginComponent,
+    SignupComponent,
 
   ],
   imports: [
