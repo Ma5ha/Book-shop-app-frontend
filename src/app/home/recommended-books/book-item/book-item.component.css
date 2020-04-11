@@ -1,0 +1,68 @@
+.recomended-sec .title {
+    margin-bottom: 70px; }
+  .book {
+    border: 1px solid #d5d5d5;
+    padding: 36px 10px;
+    cursor: pointer;
+    position: relative; }
+    .book img {
+      margin-bottom: 15px;
+      max-width: 100%; }
+    .book h3 {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 300;
+      margin-bottom: 10px;
+      height: 22px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .book h6 {
+      font-size: 12px; }
+      .book h6 span {
+        color: #ff0000; }
+      .book h6 a {
+        color: #000;
+        border-bottom: 1px solid #d5d5d5;
+        padding-bottom: 1px; }
+        .book h6 a:hover {
+          text-decoration: none;
+          border-bottom: 0;
+          color: #ff9700; }
+    .book .hover {
+      position: absolute;
+      background: rgba(204, 204, 204, 0.7);
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      vertical-align: middle;
+      align-items: center;
+      display: flex;
+      transition: all .4s ease;
+      opacity: 0; }
+      .book .hover span {
+        margin: 0 auto;
+        font-size: 50px;
+        margin-top: 40px;
+        transition: all 0.4s; }
+      .book .hover a {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        color: #000; }
+    .book:hover .hover {
+      visibility: visible;
+      opacity: 1; }
+    .book:hover span {
+      margin-top: 0; }
+    .book .sale {
+      background: #f9372c;
+      padding: 10px 24px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-transform: uppercase;
+      color: #fff; }
+   
