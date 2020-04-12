@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AngularTokenModule } from 'angular-token';
+import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +42,12 @@ import { SignupComponent } from './user-page/signup/signup.component';
 
   ],
   imports: [
+    HttpClientModule,
+    AngularTokenModule.forRoot({
+      apiBase:
+        environment.userAuth
+    }),
+    FormsModule,
     BrowserAnimationsModule,
     CarouselModule,
     BrowserModule,

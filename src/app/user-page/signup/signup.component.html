@@ -4,26 +4,34 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's printer took a galley of type and scrambled it to make a type specimen book. It has survived not
             only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </p>
-        <div class="form">
-            <form>
-                <div class="row">
-                    <div class="col-md-5">
-                        <input placeholder="Enter User Name" required>
 
-                    </div>
-                    <div class="col-md-5">
-                        <input type="email" placeholder="Enter Email Address" required>
+        <form #newUser='ngForm' class="form">
+            <div class="row">
+                <div class="col-md-5">
+                    <input name="name" ngModel placeholder="Enter User Name" required>
 
-                    </div>
+                </div>
+                <div class="col-md-5">
+                    <input name="email" ngModel type="email" placeholder="Enter Email Address" required>
+                </div>
+                <div class="col-md-5">
+                    <input name="Password" ngModel type="password" placeholder="Enter Password" required>
+
+                </div>
+                <div class="col-md-5">
+                    <input name="confirmPassword" ngModel type="password" placeholder="Confirm Password" required>
                     <div class="col-lg-8 col-md-12">
-                        <div class="button">
-                            <app-button buttonName="login" klass="black-btn"></app-button>
-                        </div>
+                        <button (click)="sign(newUser.value)"></button>
+                        <app-button buttonName="register" klass="black-btn" (click)="sign(newUser)">
+                        </app-button>
 
-                        <h5>not Registered? <a href="register.html">REgister here</a></h5>
+
+                        <h5>Have Account? <a [routerLink]="['/user']">Login</a></h5>
+
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
+
 </section>
