@@ -11,13 +11,14 @@ export class NavbarComponent {
 
   navbarItems: navbarItem[] = [
     { routeLink: '', routeName: "Home" },
+    { routeLink: '/about', routeName: "About" },
     { routeLink: '/user', routeName: "User" },
 
 
   ]
 
 
-  constructor() { }
+
 
 
 }
