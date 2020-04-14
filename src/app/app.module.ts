@@ -23,6 +23,7 @@ import { BookItemComponent } from './home/recommended-books/book-item/book-item.
 import { UserPageComponent } from './user-page/user-page.component';
 import { LoginComponent } from './user-page/login/login.component';
 import { SignupComponent } from './user-page/signup/signup.component';
+import { UserComponent } from './user-page/user/user.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +40,15 @@ import { SignupComponent } from './user-page/signup/signup.component';
     UserPageComponent,
     LoginComponent,
     SignupComponent,
+    UserComponent,
 
   ],
   imports: [
     HttpClientModule,
     AngularTokenModule.forRoot({
       apiBase:
-        environment.userAuth
+        environment.userAuth,
+      signInRedirect: '/user'
     }),
     FormsModule,
     BrowserAnimationsModule,
