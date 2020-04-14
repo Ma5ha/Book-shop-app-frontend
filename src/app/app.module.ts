@@ -24,6 +24,7 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { LoginComponent } from './user-page/login/login.component';
 import { SignupComponent } from './user-page/signup/signup.component';
 import { UserComponent } from './user-page/user/user.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { UserComponent } from './user-page/user/user.component';
     LoginComponent,
     SignupComponent,
     UserComponent,
+    FooterComponent,
 
   ],
   imports: [

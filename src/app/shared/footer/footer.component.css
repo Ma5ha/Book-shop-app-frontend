@@ -1,0 +1,116 @@
+footer {
+    background: #f0f0f0;
+    padding: 80px 0 0;
+    width: 100%;
+    float: left;
+}
+.container {
+    width: 1200px;
+    padding: 0 50px;
+    max-width: 1200px;
+}
+footer .address {
+    margin-bottom: 50px;
+}
+footer h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+footer .address h6 {
+    color: #464646;
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    padding-right: 50px;
+    line-height: 24px;
+}
+footer .timing h6 {
+    color: #464646;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+footer .navigation {
+    margin-bottom: 40px;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+footer ul li {
+    margin-bottom: 5px;
+    list-style: none;
+}
+footer h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+footer .form h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+footer .form h6 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    width: 90%;
+    margin-bottom: 25px;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+footer .form input {
+    width: 100%;
+    height: 42px;
+    padding-left: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border: 0;
+}
+footer .form textarea {
+    width: 100%;
+    resize: none;
+    height: 100px;
+    border: 0;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+textarea {
+    font-family: 'Raleway', sans-serif;
+    outline: 0;
+}
+footer .copy-right {
+    background: #000;
+    color: #fff;
+    padding: 25px 0;
+    margin-top: 60px;
+}
+footer .copy-right h5 {
+    font-size: 14px;
+    font-weight: 300;
+}
+footer .copy-right .share {
+    text-align: right;
+}
+footer ul li a {
+    color: #464646;
+    font-size: 12px;
+}
+a {
+    
+    text-decoration: none;
+    background-color: transparent;
+}
+footer .copy-right .share span {
+    padding: 0 5px;
+    cursor: pointer;
+}
