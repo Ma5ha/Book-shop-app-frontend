@@ -13,8 +13,7 @@ header .header-top h5 {
     padding: 0;
     margin-bottom: 10px; }
 
-  header .main-menu .navbar-light .navbar-nav .navbar-item:after {
-    display: none; }
+ 
 
   header .cart {
     max-width: 34px; }
@@ -31,3 +30,6 @@ header .header-top h5 {
             
               header .navbar-nav {
                 padding-top: 10px; }
+
+
+              

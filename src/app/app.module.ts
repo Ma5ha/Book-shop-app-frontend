@@ -26,6 +26,8 @@ import { SignupComponent } from './user-page/signup/signup.component';
 import { UserComponent } from './user-page/user/user.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { AboutComponent } from './about/about.component';
     UserComponent,
     FooterComponent,
     AboutComponent,
+    PrivacyPolicyComponent,
+    TermsandconditionComponent,
 
   ],
   imports: [

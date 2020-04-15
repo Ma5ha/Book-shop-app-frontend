@@ -6,14 +6,22 @@ import { SignupComponent } from './user-page/signup/signup.component'
 import { UserComponent } from './user-page/user/user.component'
 import { UserGuard } from './user.guard'
 import { AboutComponent } from './about/about.component'
-
-
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component'
+import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component'
 
 const routes: Routes = [{
   path: '',
   component: HomeComponent,
   pathMatch: 'full',
 
+},
+{
+  path: "termsandcondition",
+  component: TermsandconditionComponent
+},
+{
+  path: "privacy-policy",
+  component: PrivacyPolicyComponent
 },
 {
   path: 'about',
