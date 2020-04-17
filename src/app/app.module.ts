@@ -30,6 +30,8 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
 import { FlashComponent } from './shared/flash/flash.component';
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { FlashmessageService } from '@app/shared/service/flashmessage.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,8 +60,8 @@ import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     AngularTokenModule.forRoot({
       apiBase:
-        environment.userAuth,
-      signInRedirect: '/user'
+        environment.userAuth
+
     }),
     FormsModule,
     BrowserAnimationsModule,
@@ -67,7 +69,7 @@ import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FlashmessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -30,24 +30,34 @@ const routes: Routes = [{
 {
   path: 'user',
   component: UserPageComponent,
-  children: [{
-    path: '',
-    component: UserComponent,
-    canActivate: [UserGuard],
-    pathMatch: 'full'
+  children: [
+    {
+      path: '',
+      redirectTo: 'user',
+      pathMatch: 'full'
 
-  },
-  {
-    path: 'signup',
-    component: SignupComponent,
-    pathMatch: 'full'
-  },
-  {
-    path: '**',
-    component: LoginComponent,
-    pathMatch: 'full'
+    }
+    ,
 
-  }
+    {
+      path: 'signup',
+      component: SignupComponent,
+      pathMatch: 'full'
+    },
+    {
+      path: 'login',
+      component: LoginComponent,
+      pathMatch: 'full'
+
+    },
+    {
+
+      path: 'user',
+      component: UserComponent,
+      canActivate: [UserGuard],
+      pathMatch: 'full'
+
+    },
 
   ]
 }

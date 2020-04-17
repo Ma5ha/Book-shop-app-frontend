@@ -15,13 +15,14 @@ export class UserGuard implements CanActivate {
       return true
     }
     else {
+      this.router.navigateByUrl('/user/login')
       this.Flash.SetMessage({
         for: "LoginComponent",
         type: "info",
         message: "Please login if u have account or Sign up!"
       })
-      this.router.navigateByUrl('/user/login')
 
+      console.log(this.Flash.flashToken)
 
     }
 

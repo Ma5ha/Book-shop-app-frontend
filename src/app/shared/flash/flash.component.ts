@@ -21,6 +21,8 @@ export class FlashComponent implements OnInit {
 
   ngOnInit(): void {
     this.render()
+    console.log(this.FlashMessage.flashToken)
+
   }
 
   render(): boolean {
@@ -35,9 +37,12 @@ export class FlashComponent implements OnInit {
 
 
   close(): void {
-    this.flashFor = " none"
+
+
+    this.FlashMessage.clearMessage()
+    this.flashFor = this.FlashMessage.flashToken.for
     this.render()
 
+    console.log(this.FlashMessage.flashToken)
   }
-
 }

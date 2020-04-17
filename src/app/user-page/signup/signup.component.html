@@ -21,12 +21,12 @@
                 <div class="col-md-5">
                     <input name="confirmPassword" ngModel type="password" placeholder="Confirm Password" required>
                     <div class="col-lg-8 col-md-12">
-                        <button (click)="sign(newUser.value)"></button>
-                        <app-button buttonName="register" klass="black-btn" (click)="sign(newUser)">
+
+                        <app-button buttonName="register" klass="black-btn" (click)="sign(newUser.value)">
                         </app-button>
 
 
-                        <h5>Have Account? <a [routerLink]="['/user']">Login</a></h5>
+                        <h5>Have Account? <a [routerLink]="['/user/login']">Login</a></h5>
 
                     </div>
                 </div>

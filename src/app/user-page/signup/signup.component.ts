@@ -13,15 +13,16 @@ export class SignupComponent {
   sign(newUser) {
     this.tokenService.registerAccount({
       login: newUser.email,
-      password: newUser.password,
+      password: newUser.Password,
       passwordConfirmation: newUser.passwordConfirmation,
       name: newUser.name
     })
+
       .subscribe(
         res => console.log(res),
         error => console.log(error)
       );
-
+    console.log(newUser)
 
   }
 }

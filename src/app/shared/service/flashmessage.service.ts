@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
 import { FlashToken } from '@app/shared/flash/core/message'
+
+
+
 @Injectable({
   providedIn: 'root'
 })
+
+
+
 export class FlashmessageService {
 
   flashToken: FlashToken
@@ -13,6 +19,13 @@ export class FlashmessageService {
 
 
 
+  }
+  clearMessage() {
+    this.flashToken = {
+      for: '',
+      type: '',
+      message: '',
+    }
   }
 
 }
