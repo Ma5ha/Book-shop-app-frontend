@@ -28,7 +28,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
-
+import { FlashComponent } from './shared/flash/flash.component';
+import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,9 +50,11 @@ import { TermsandconditionComponent } from './termsandcondition/termsandconditio
     AboutComponent,
     PrivacyPolicyComponent,
     TermsandconditionComponent,
+    FlashComponent,
 
   ],
   imports: [
+    NgbAlertModule,
     HttpClientModule,
     AngularTokenModule.forRoot({
       apiBase:

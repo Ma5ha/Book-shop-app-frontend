@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularTokenService } from 'angular-token'
+import { FlashmessageService } from '@app/shared/service/flashmessage.service'
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,10 @@ import { AngularTokenService } from 'angular-token'
 })
 export class LoginComponent {
 
-  constructor(private tokenService: AngularTokenService) { }
+
+  constructor(private tokenService: AngularTokenService, public FlashMessage: FlashmessageService) { }
+
+
 
 
   login(user) {
@@ -17,5 +21,14 @@ export class LoginComponent {
       password: user.name
 
     })
+
   }
+
+
+
+  component: string = "LoginComponent"
+
 }
+
+
+

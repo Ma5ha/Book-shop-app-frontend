@@ -1,0 +1,6 @@
+<ng-container *ngIf="render()">
+
+    <ngb-alert [type]="flashType" (close)="close()">
+        <h5>{{flashMessage}}</h5>
+    </ngb-alert>
+</ng-container>
