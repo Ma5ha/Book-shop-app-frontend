@@ -14,6 +14,9 @@
                             <a class="nav-link" [routerLink]='navItem.routeLink'
                                 routerLinkActive="router-link-active">{{navItem.routeName}}</a>
                         </li>
+                        <li *ngIf='isSignedIn'>
+                            <a class="nav-link" (click)='signOut()'>Sign out</a>
+                        </li>
                     </ul>
                     <div class="cart my-2 my-lg-0">
                         <span>

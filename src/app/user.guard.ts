@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate, Router } from '@angular/router';
+
 import { AngularTokenService } from 'angular-token'
 import { FlashmessageService } from '@app/shared/service/flashmessage.service'
-import { LoginComponent } from './user-page/login/login.component';
+
 @Injectable({
   providedIn: 'root'
 })

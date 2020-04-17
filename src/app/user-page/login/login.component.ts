@@ -18,7 +18,7 @@ export class LoginComponent {
   login(user) {
     this.tokenService.signIn({
       login: user.email,
-      password: user.name
+      password: user.password
 
     })
 
