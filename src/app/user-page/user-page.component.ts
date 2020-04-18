@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserPageComponent implements OnInit {
 
+  component: string = "Welcome back" || "Thank You"
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }
