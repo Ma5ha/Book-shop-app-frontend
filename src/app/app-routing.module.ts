@@ -11,12 +11,18 @@ import { TermsandconditionComponent } from './termsandcondition/termsandconditio
 
 const routes: Routes = [{
   path: '',
-  component: HomeComponent,
-  pathMatch: 'full',
 
+
+  redirectTo: 'home',
+  pathMatch: 'full',
 },
 {
-  path: "termsandcondition",
+  path: 'home',
+  component: HomeComponent,
+  pathMatch: 'full',
+},
+{
+  path: "termsandcond ition",
   component: TermsandconditionComponent
 },
 {

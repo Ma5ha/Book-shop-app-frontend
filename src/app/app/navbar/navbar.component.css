@@ -32,4 +32,27 @@ header .header-top h5 {
                 padding-top: 10px; }
 
 
+                input{ 
+
+                  animation-name: hover-nav-link;
+                  animation-duration: 3s;
+                  animation-iteration-count: infinite;
+                }
               
+                
+                
+                              @keyframes hover-nav-link {
+                                0%   {border-color:#000000}
+                                10%   {border-color:#322514}
+                                20%   {border-color:#644a29}
+                                30%   {border-color:#976f3e}
+                                40%   {border-color:#c99453}
+                                50%   {border-color:#fcba68}
+                                60%   {border-color:#c99453}
+                                70%   {border-color:#976f3e}
+                                80%   {border-color:#644a29}
+                                90%   {border-color:#322514}
+                                100%   {border-color:#000000}
+                
+                
+                                }
