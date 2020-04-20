@@ -10,4 +10,6 @@ export class BookItemComponent {
 
   @Input() book: Book
 
+
+
 }
