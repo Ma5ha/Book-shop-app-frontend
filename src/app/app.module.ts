@@ -31,7 +31,8 @@ import { TermsandconditionComponent } from './termsandcondition/termsandconditio
 import { FlashComponent } from './shared/flash/flash.component';
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { FlashmessageService } from '@app/shared/service/flashmessage.service'
+import { FlashmessageService } from '@app/shared/service/flashmessage.service';
+import { ProductComponent } from './product/product.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +54,7 @@ import { FlashmessageService } from '@app/shared/service/flashmessage.service'
     PrivacyPolicyComponent,
     TermsandconditionComponent,
     FlashComponent,
+    ProductComponent,
 
   ],
   imports: [

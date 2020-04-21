@@ -6,6 +6,8 @@ import { Book } from '@app/home/recommended-books/core';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class BookService {
 
   constructor(private bookClient: HttpClient) {
@@ -14,5 +16,10 @@ export class BookService {
   getTop5Books(): Observable<any> {
     return this.bookClient.get(environment.bookPath)
 
+  }
+  getBook(id: string) {
+    return this.bookClient.get('http://localhost:3000/book', {
+      params: { id: id }
+    })
   }
 }

@@ -8,8 +8,15 @@ import { UserGuard } from './user.guard'
 import { AboutComponent } from './about/about.component'
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component'
 import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component'
-
+import { ProductComponent } from './product/product.component'
 const routes: Routes = [{
+  path: 'product/:id',
+  component: ProductComponent,
+  pathMatch: "full"
+},
+
+{
+
   path: '',
 
 

@@ -1,0 +1,48 @@
+<section class="product-sec">
+    <div class="container">
+        <h1>{{book.title}}</h1>
+        <div class="row">
+            <div class="col-md-6 slider-sec">
+                <!-- main slider carousel -->
+                <div id="myCarousel" class="carousel slide">
+                    <!-- main slider carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active item carousel-item" data-slide-number="0">
+                            <img src={{book.cover}} class="img-fluid">
+                        </div>
+
+                    </div>
+                    <!-- main slider carousel nav controls -->
+
+                </div>
+                <!--/main slider carousel-->
+            </div>
+            <div class="col-md-6 slider-content">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's printer took a galley of type and Scrambled it to make a type and typesetting industry.
+                    Lorem Ipsum has been the book. </p>
+                <p>t has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's printer took a galley of type and</p>
+                <ul>
+                    <li>
+                        <span class="name">Digital List Price</span><span class="clm">:</span>
+                        <span class="price">{{book.price}}</span>
+                    </li>
+                    <li>
+                        <span class="name">Print List Price</span><span class="clm">:</span>
+                        <span class="price">{{book.price}}</span>
+                    </li>
+                    <li>
+                        <span class="name">Kindle Price</span><span class="clm">:</span>
+                        <span class="price final">{{book.price}}</span>
+                    </li>
+                    <li><span class="save-cost">Save $7.62 (69%)</span></li>
+                </ul>
+                <div class="btn-sec">
+                    <app-button buttonName="add to cart" klass="yellow-btn" class="btn yellow"></app-button>
+                    <app-button buttonName="buy now" klass="black-btn"></app-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

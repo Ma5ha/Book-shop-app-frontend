@@ -1,0 +1,96 @@
+.product-sec {
+    margin-bottom: 100px; }
+    .product-sec h1 {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      color: #363636; }
+    .product-sec #myCarousel .list-inline {
+      white-space: nowrap; }
+    .product-sec #myCarousel .carousel-indicators {
+      /* position: static; */
+      left: initial;
+      width: initial;
+      margin-left: initial;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: initial;
+      bottom: inherit;
+      display: block;
+      margin-right: 0;
+      width: 115px; }
+    .product-sec #myCarousel .carousel-indicators > li {
+      width: 100%;
+      margin-left: 0;
+      height: initial;
+      text-indent: initial;
+      display: block;
+      margin-bottom: 12px; }
+    .product-sec #myCarousel .carousel-indicators > li.active img {
+      opacity: 0.7;
+      outline: 1px solid #ff0000; }
+    .product-sec #myCarousel .carousel-indicators > li img {
+      cursor: pointer; }
+    .product-sec .carousel-inner {
+      width: 360px;
+      float: left;
+      margin-right: 15px; }
+    .product-sec .slider-sec {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 520px;
+      flex: 0 0 520px;
+      max-width: 520px; }
+    .product-sec .slider-content p {
+      font-size: 16px;
+      font-weight: 200;
+      line-height: 30px;
+      margin-bottom: 25px; }
+    .product-sec .slider-content ul {
+      list-style: none;
+      width: 320px;
+      margin-bottom: 40px;
+      float: left; }
+      .product-sec .slider-content ul li {
+        margin-bottom: 10px;
+        float: left;
+        width: 100%; }
+        .product-sec .slider-content ul li span {
+          width: 180px;
+          font-weight: 300;
+          display: inline-block;
+          float: left; }
+          .product-sec .slider-content ul li span.price {
+            padding-left: 20px;
+            font-weight: 600;
+            text-decoration: line-through;
+            width: 100px; }
+          .product-sec .slider-content ul li span.final {
+            font-size: 24px;
+            text-decoration: none;
+            color: #ff0000;
+            line-height: 24px; }
+          .product-sec .slider-content ul li span.clm {
+            width: 5px; }
+          .product-sec .slider-content ul li span.save-cost {
+            text-align: right;
+            width: 100%;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 14px; }
+    .product-sec .btn-sec {
+      width: 100%;
+      clear: both; }
+      .product-sec .btn-sec .btn {
+        margin-right: 15px; }
+        .product-sec h1 {
+          font-size: 28px; }
+      
+        .related-books h2 {
+          font-size: 28px; } 
+
+      @media only screen and (max-width: 800px) {
+        .product-sec .slider-sec {
+          margin-bottom: 30px; }
+        }
