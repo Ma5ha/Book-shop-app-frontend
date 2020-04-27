@@ -9,7 +9,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class ProductComponent implements OnInit {
 
   constructor(private bookService: BookService, private route: ActivatedRoute,
-    private router: Router) { }
+  ) { }
 
   book
 
