@@ -29,10 +29,11 @@ import { AboutComponent } from './about/about.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
 import { FlashComponent } from './shared/flash/flash.component';
-import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FlashmessageService } from '@app/shared/service/flashmessage.service';
-import { ProductComponent } from './product/product.component'
+import { ProductComponent } from './product/product.component';
+import { NgbdDropdownFormComponent } from './app/navbar/ngbd-dropdown-form/ngbd-dropdown-form.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,9 +56,11 @@ import { ProductComponent } from './product/product.component'
     TermsandconditionComponent,
     FlashComponent,
     ProductComponent,
+    NgbdDropdownFormComponent,
 
   ],
   imports: [
+    NgbDropdownModule,
     NgbAlertModule,
     HttpClientModule,
     AngularTokenModule.forRoot({
