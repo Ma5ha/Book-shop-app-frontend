@@ -1,11 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-.slider .owl-dot  span
-{
-background: #fff !important;
 
+.slider .owl-dot span {
+    background: #fff !important;
 }
-.owl-dot.active  span
-{
+
+.owl-dot.active span {
     background-color: #ff9700 !important;
 }
 
@@ -13,4 +12,13 @@ background: #fff !important;
     position: absolute;
     bottom: 30px;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+}
+
+.dropdown-item.ng-star-inserted.active {
+    background-color: black;
+    border-bottom: 2px outset #ff9700;
+    border-radius: 0px 0px 40px 0px;
+    border-right: 2px outset #ff9700;
+    ;
+}

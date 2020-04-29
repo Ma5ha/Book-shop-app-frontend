@@ -36,7 +36,11 @@
     </div>
 </header>
 
-<ng-template #rt let-r="result" let-t="term">
+<ng-template class="result" #rt let-r="result" let-t="term">
     <img src={{r.cover}} class="mr-1" style="width: 16px">
-    <ngb-highlight [result]="r.title" [term]="t"></ngb-highlight>
+    <ngb-highlight [result]="r.title" [term]="t" [routerLink]="['/product/',r.id]">
+
+
+    </ngb-highlight>
+
 </ng-template>
