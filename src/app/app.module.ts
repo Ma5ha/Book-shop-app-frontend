@@ -33,7 +33,7 @@ import { NgbAlertModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FlashmessageService } from '@app/shared/service/flashmessage.service';
 import { ProductComponent } from './product/product.component';
-import { NgbdDropdownFormComponent } from './app/navbar/ngbd-dropdown-form/ngbd-dropdown-form.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +56,7 @@ import { NgbdDropdownFormComponent } from './app/navbar/ngbd-dropdown-form/ngbd-
     TermsandconditionComponent,
     FlashComponent,
     ProductComponent,
-    NgbdDropdownFormComponent,
+
 
   ],
   imports: [
