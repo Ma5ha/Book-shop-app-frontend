@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { BookService } from '@app/shared/service/book.service'
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
@@ -6,7 +6,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements OnInit, OnChanges {
 
   constructor(private bookService: BookService, private route: ActivatedRoute,
   ) { }
@@ -14,21 +14,19 @@ export class ProductComponent implements OnInit {
   book
 
   ngOnInit(): void {
-    this.getMeBook()
+
+    this.route.params.subscribe(x => this.getBook(x.id))
 
   }
   private getBook(param: string) {
 
     this.bookService.getBook(param).subscribe(x => this.book = x)
   }
-  getMeBook() {
-    let id = this.route.snapshot.paramMap.get('id')
-    this.getBook(id)
 
-
-
+  ngOnChanges() {
 
   }
+
 }
 
 
