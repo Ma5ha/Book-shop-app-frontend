@@ -7,6 +7,7 @@ import { Book } from '@app/home/recommended-books/core'
 import { BookService } from '@app/shared/service/book.service'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CartComponent } from '@app/cart/cart.component'
+import { CartService } from '@app/shared/service/cart.service';
 
 
 @Component({
@@ -34,12 +35,14 @@ export class NavbarComponent implements OnInit {
   public model: any;
 
 
-
-  constructor(private AngularTokenService: AngularTokenService, private bookService: BookService, private modalService: NgbModal) {
+  cart: number = 0
+  constructor(private AngularTokenService: AngularTokenService, private bookService: BookService, private modalService: NgbModal,
+    public cartService: CartService) {
 
   }
   ngOnInit() {
     this.bookService.getTop5Books().subscribe(x => this.books = x)
+    this.cartService.itemsInCart.subscribe((x) => { this.cart = x; console.log('i it is subscribed with', x) })
   }
   open() {
     const modalRef = this.modalService.open(CartComponent);
