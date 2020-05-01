@@ -1,58 +1,111 @@
-
-
 header .header-top h5 {
-    font-size: 12px; }
+  font-size: 12px;
+}
 
-  header .header-top .ph-number {
-    font-size: 12px; }
+header .header-top .ph-number {
+  font-size: 12px;
+}
 
-  header .main-menu {
-    padding: 20px 0; }
+header .main-menu {
+  padding: 20px 0;
+}
 
-  header .main-menu .navbar-light .navbar-nav .navbar-item {
-    padding: 0;
-    margin-bottom: 10px; }
+header .main-menu .navbar-light .navbar-nav .navbar-item {
+  padding: 0;
+  margin-bottom: 10px;
+}
 
- 
+header .main-menu .form-inline {
+  max-width: 200px;
+}
 
-  header .cart {
-    max-width: 34px; }
+header .main-menu .form-inline input {
+  width: 170px;
+  height: 38px;
+}
 
-  header .main-menu .form-inline {
-    max-width: 200px; }
-    header .cart .quntity {
-        font-size: 10px; }
-        header .main-menu .form-inline input {
-            width: 170px;
-            height: 38px; }
-            header .header-top .ph-number {
-                float: initial; }
-            
-              header .navbar-nav {
-                padding-top: 10px; }
+header .header-top .ph-number {
+  float: initial;
+}
 
+header .navbar-nav {
+  padding-top: 10px;
+}
 
-                input{ 
+input {
+  animation-name: hover-nav-link;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
 
-                  animation-name: hover-nav-link;
-                  animation-duration: 3s;
-                  animation-iteration-count: infinite;
-                }
-              
-                
-                
-                              @keyframes hover-nav-link {
-                                0%   {border-color:#000000}
-                                10%   {border-color:#322514}
-                                20%   {border-color:#644a29}
-                                30%   {border-color:#976f3e}
-                                40%   {border-color:#c99453}
-                                50%   {border-color:#fcba68}
-                                60%   {border-color:#c99453}
-                                70%   {border-color:#976f3e}
-                                80%   {border-color:#644a29}
-                                90%   {border-color:#322514}
-                                100%   {border-color:#000000}
-                
-                
-                                }
+@keyframes hover-nav-link {
+  0% {
+    border-color: #000000
+  }
+  10% {
+    border-color: #322514
+  }
+  20% {
+    border-color: #644a29
+  }
+  30% {
+    border-color: #976f3e
+  }
+  40% {
+    border-color: #c99453
+  }
+  50% {
+    border-color: #fcba68
+  }
+  60% {
+    border-color: #c99453
+  }
+  70% {
+    border-color: #976f3e
+  }
+  80% {
+    border-color: #644a29
+  }
+  90% {
+    border-color: #322514
+  }
+  100% {
+    border-color: #000000
+  }
+}
+
+.navbar-item:after {
+  content: '';
+  width: 1px;
+  height: 18px;
+  float: right;
+  background: #a3a3a3;
+  position: relative;
+  right: 0;
+  bottom: 27px
+}
+
+.navbar-nav {
+  position: relative;
+  right: 5px;
+  top: 6px
+}
+
+.form-inline {
+  position: relative;
+  left: 5px;
+}
+
+.quntity {
+  font-size: 9px;
+  position: absolute;
+  top: 30px;
+  background: red;
+  width: 15px;
+  height: 15px;
+  border-radius: 60%;
+  text-align: center;
+  color: #fff;
+  padding: 1px 0;
+  right: 205px;
+}
