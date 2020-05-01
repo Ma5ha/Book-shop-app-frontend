@@ -1,6 +1,8 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { BookService } from '@app/shared/service/book.service'
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { CartService } from '@app/shared/service/cart.service'
+import { Book } from '@app/home/recommended-books/core';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -8,7 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class ProductComponent implements OnInit, OnChanges {
 
-  constructor(private bookService: BookService, private route: ActivatedRoute,
+  constructor(private bookService: BookService, private route: ActivatedRoute, private cartService: CartService
   ) { }
 
   book
@@ -24,6 +26,12 @@ export class ProductComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
+
+  }
+  addBookToCart() {
+    let book: Book = this.book
+    this.cartService.cart.push(book)
+
 
   }
 

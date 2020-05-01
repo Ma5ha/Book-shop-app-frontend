@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { CartService } from '@app/shared/service/cart.service'
+import { Book } from '@app/home/recommended-books/core';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -8,9 +9,14 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class CartComponent implements OnInit {
 
-  constructor(public activeModal: NgbActiveModal) { }
+  cart: Book[];
+  constructor(public activeModal: NgbActiveModal, private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.cart = this.cartService.cart
+  }
+
+  removeBookFromCart() {
   }
 
 }
