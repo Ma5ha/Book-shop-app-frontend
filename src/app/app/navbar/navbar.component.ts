@@ -2,14 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { navbarItem } from './index'
 import { AngularTokenService } from 'angular-token'
 import { Observable, PartialObserver } from 'rxjs';
-import {
-  debounceTime, distinctUntilChanged, map, pluck
-
-} from 'rxjs/operators';
+import { debounceTime, map, } from 'rxjs/operators';
 import { Book } from '@app/home/recommended-books/core'
 import { BookService } from '@app/shared/service/book.service'
-
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { CartComponent } from '@app/cart/cart.component'
 
 
 @Component({
@@ -38,12 +35,14 @@ export class NavbarComponent implements OnInit {
 
 
 
-  constructor(private AngularTokenService: AngularTokenService, private bookService: BookService) {
+  constructor(private AngularTokenService: AngularTokenService, private bookService: BookService, private modalService: NgbModal) {
 
   }
   ngOnInit() {
     this.bookService.getTop5Books().subscribe(x => this.books = x)
-
+  }
+  open() {
+    const modalRef = this.modalService.open(CartComponent);
 
   }
 
