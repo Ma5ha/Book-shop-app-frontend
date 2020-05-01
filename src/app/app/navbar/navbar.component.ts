@@ -42,7 +42,7 @@ export class NavbarComponent implements OnInit {
   }
   ngOnInit() {
     this.bookService.getTop5Books().subscribe(x => this.books = x)
-    this.cartService.itemsInCart.subscribe((x) => { this.cart = x; console.log('i it is subscribed with', x) })
+    this.cartService.itemsInCart.subscribe((x) => { this.cart = x; })
   }
   open() {
     const modalRef = this.modalService.open(CartComponent);
