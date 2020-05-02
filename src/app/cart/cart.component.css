@@ -1,0 +1,33 @@
+ul {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0px;
+    margin: 5px;
+}
+
+img {
+    display: inline-block;
+    height: 70px;
+    float: left;
+    opacity: 0.8;
+}
+
+p {
+    display: inline-block;
+    float: right;
+    text-align: left;
+    width: 430px;
+    opacity: 0.8;
+}
+
+li {
+    display: block;
+    height: 80px;
+    margin-bottom: 5px;
+    padding: 1px;
+}
+
+ul :hover {
+    background-color: #fcba68;
+}

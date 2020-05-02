@@ -1,4 +1,8 @@
-<p>cart works!</p>
-<div *ngFor='let item of cart'>
-    {{item.title}}
-</div>
+<ul>
+    <li *ngFor='let item of cart'>
+        <img src={{item.cover}}>
+        <p>{{item.title}}</p>
+
+    </li>
+
+</ul>
