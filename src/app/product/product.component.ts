@@ -30,7 +30,8 @@ export class ProductComponent implements OnInit, OnChanges {
   }
   addBookToCart() {
     let book: Book = this.book
-    this.cartService.itemsCount(book)
+    this.cartService.addBook(book)
+
 
 
   }

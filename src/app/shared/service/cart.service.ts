@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Book } from '@app/home/recommended-books/core';
 import { BookService } from '@app/shared/service/book.service'
 import { Observable, Subject } from 'rxjs';
@@ -9,14 +9,19 @@ import { retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CartService {
-  cart = []
-  itemsInCart = new Subject<number>()
+  cart: Book[] = []
+  book: Subject<Book> = new Subject
 
-  constructor() { }
+  constructor() {
+    this.book.subscribe(book => this.cart.push(book))
 
-  itemsCount(book?: Book) {
-    this.cart.push(book)
-    this.itemsInCart.next(this.cart.length)
+  }
+
+
+  addBook(book?: Book) {
+
+    this.book.next(book)
+    console.log(this.cart)
   }
 
 
