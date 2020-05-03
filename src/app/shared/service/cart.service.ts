@@ -1,8 +1,8 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Book } from '@app/home/recommended-books/core';
-import { BookService } from '@app/shared/service/book.service'
-import { Observable, Subject } from 'rxjs';
-import { retry } from 'rxjs/operators';
+
+import { Subject } from 'rxjs';
+
 
 
 @Injectable({
