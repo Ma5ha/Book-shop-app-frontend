@@ -8,7 +8,7 @@ import { Book } from '@app/home/recommended-books/core';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit, OnChanges {
+export class ProductComponent implements OnInit {
 
   constructor(private bookService: BookService, private route: ActivatedRoute, private cartService: CartService
   ) { }
@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit, OnChanges {
   ngOnInit(): void {
 
     this.route.params.subscribe(x => this.getBook(x.id))
-    this.cartService.book.subscribe(x => console.log(x))
+
 
   }
   private getBook(param: string) {
@@ -26,9 +26,7 @@ export class ProductComponent implements OnInit, OnChanges {
     this.bookService.getBook(param).subscribe(x => this.book = x)
   }
 
-  ngOnChanges() {
 
-  }
   addBookToCart() {
     let book: Book = this.book
     this.cartService.addBook(book)
