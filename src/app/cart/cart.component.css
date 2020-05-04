@@ -6,28 +6,36 @@ ul {
     margin: 5px;
 }
 
-img {
-    display: inline-block;
-    height: 70px;
-    float: left;
-    opacity: 0.8;
-}
-
-p {
-    display: inline-block;
-    float: right;
-    text-align: left;
-    width: 430px;
-    opacity: 0.8;
+li:hover {
+    background-color: #fcba68;
+    opacity: 0.7;
+    box-shadow: 5px 24px 39px 3px rgba(0, 0, 0, 0.41);
 }
 
 li {
-    display: block;
-    height: 80px;
-    margin-bottom: 5px;
-    padding: 1px;
+    display: inline-grid;
+    grid-template-columns: 70px 550px 70px 50px;
+    height: 90px;
 }
 
-ul :hover {
-    background-color: #fcba68;
+img {
+    width: 70px;
+}
+
+h4 {
+    text-align: center;
+    display: block;
+}
+
+i {
+    margin: 2rem;
+    width: 10px;
+    display: block;
+    align-self: center;
+    color: #0062cc;
+}
+
+h6 {
+    align-self: center;
+    display: block;
 }
