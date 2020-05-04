@@ -13,7 +13,8 @@ import { CartService } from '@app/shared/service/cart.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
+
 })
 
 
@@ -45,7 +46,7 @@ export class NavbarComponent implements OnInit {
     this.cartService.cartSize.subscribe(cartSize => this.cart = cartSize)
   }
   open(): void {
-    const modalRef = this.modalService.open(CartComponent);
+    const modalRef = this.modalService.open(CartComponent, { centered: true, scrollable: true, size: 'lg' });
 
   }
 
