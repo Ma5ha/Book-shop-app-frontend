@@ -9,20 +9,25 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
-  cart: Book[] = []
+  cart: Map<number, Book> = new Map<number, Book>()
   book: Subject<Book> = new Subject
-
+  cartSize: Subject<number> = new Subject()
   constructor() {
-    this.book.subscribe(book => this.cart.push(book))
+    this.book.subscribe(book => this.cart.set(this.cart.size, book))
 
   }
 
 
-  addBook(book?: Book) {
+  addBook(book?: Book): void {
 
     this.book.next(book)
-    console.log(this.cart)
+    this.cartSize.next(this.cart.size)
   }
 
 
+  removeBook(index: number): void {
+    this.cart.delete(index)
+    this.cartSize.next(this.cart.size)
+
+  }
 }

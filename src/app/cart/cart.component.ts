@@ -9,14 +9,16 @@ import { Book } from '@app/home/recommended-books/core';
 })
 export class CartComponent implements OnInit {
 
-  cart: Book[];
+  cart: Map<number, Book>
   constructor(public activeModal: NgbActiveModal, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.cart = this.cartService.cart
   }
 
-  removeBookFromCart() {
+  removeBookFromCart(index: number): void {
+
+    this.cartService.removeBook(index)
   }
 
 }

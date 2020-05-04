@@ -37,14 +37,14 @@ export class NavbarComponent implements OnInit {
 
   cart: number = 0
   constructor(private AngularTokenService: AngularTokenService, private bookService: BookService, private modalService: NgbModal,
-    public cartService: CartService) {
+    private cartService: CartService) {
 
   }
-  ngOnInit() {
+  ngOnInit(): void {
     this.bookService.getTop5Books().subscribe(x => this.books = x)
-    this.cartService.book.subscribe(() => this.cart = this.cart + 1)
+    this.cartService.cartSize.subscribe(cartSize => this.cart = cartSize)
   }
-  open() {
+  open(): void {
     const modalRef = this.modalService.open(CartComponent);
 
   }
@@ -54,7 +54,7 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  signOut() {
+  signOut(): void {
     this.AngularTokenService.signOut().subscribe()
   }
 

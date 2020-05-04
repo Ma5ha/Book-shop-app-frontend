@@ -1,8 +1,9 @@
 <ul>
-    <li *ngFor='let item of cart'>
-        <img src={{item.cover}}>
-        <p>{{item.title}}</p>
+    <li *ngFor='let item of cart | keyvalue'>
+        <img src={{item.value.cover}}>
+        <p>{{item.value.title}}</p>
 
+        <button (click)='removeBookFromCart(item.key)'>click</button>
     </li>
 
 </ul>

@@ -18,6 +18,7 @@ export class ProductComponent implements OnInit, OnChanges {
   ngOnInit(): void {
 
     this.route.params.subscribe(x => this.getBook(x.id))
+    this.cartService.book.subscribe(x => console.log(x))
 
   }
   private getBook(param: string) {
