@@ -11,13 +11,16 @@ import { Book } from '@app/home/recommended-books/core';
 export class ProductComponent implements OnInit {
 
   constructor(private bookService: BookService, private route: ActivatedRoute, private cartService: CartService
-  ) { }
+  ) {
+
+  }
 
   book
 
   ngOnInit(): void {
-
     this.route.params.subscribe(x => this.getBook(x.id))
+
+
 
 
   }
