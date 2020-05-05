@@ -10,15 +10,22 @@ import { Book } from '@app/home/recommended-books/core';
 export class CartComponent implements OnInit {
 
   cart: Map<string, Book>
+  totalCartPrice = this.cartService.totalCartPrice
   constructor(public activeModal: NgbActiveModal, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.cart = this.cartService.cart
+
   }
 
   removeBookFromCart(index: string): void {
-
+    let book = this.cart.get(index)
     this.cartService.removeBook(index)
+
+
+    this.cartService.totalCartPrice -= book.price
+
+    this.totalCartPrice = this.cartService.totalCartPrice
   }
 
 }

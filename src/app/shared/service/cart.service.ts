@@ -13,8 +13,10 @@ export class CartService {
   cart: Map<string, Book> = new Map<string, Book>()
   book: Subject<Book> = new Subject
   cartSize: Subject<number> = new Subject()
+  totalCartPrice = 0
   constructor() {
     this.book.subscribe(book => this.cart.set(hashString(), book))
+    this.book.subscribe(book => this.totalCartPrice += book.price)
 
   }
 
@@ -24,12 +26,15 @@ export class CartService {
     this.book.next(book)
     this.cartSize.next(this.cart.size)
 
+
+
   }
 
 
   removeBook(index: string): void {
     this.cart.delete(index)
     this.cartSize.next(this.cart.size)
+
 
   }
 }
