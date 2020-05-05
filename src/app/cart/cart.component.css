@@ -27,15 +27,18 @@ h4 {
     display: block;
 }
 
-i {
+.modal-body i {
     margin: 2rem;
     width: 10px;
     display: block;
     align-self: center;
-    color: #0062cc;
 }
 
 h6 {
     align-self: center;
     display: block;
+}
+
+.header span {
+    float: right;
 }
