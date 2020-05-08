@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.
+User.create({name: 'masha',
+email: 'blagmash@gmail.com',
+password: 'jelena99',
+confirm_password:'jelena99'}
+)
+
  Book.create([{
     title: "Programming TypeScript: Making Your JavaScript Applications Scale",
     author:"Boris Cherny",
