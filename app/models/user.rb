@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
-  has_many :cart
-  has_many :book, through: :cart, :source=> :user_id
+  has_many :carts
+  has_many :books, through: :carts
 end

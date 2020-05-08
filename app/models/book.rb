@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-    has_many :cart
-    has_many :user, through: :cart
+    has_many :carts
+    has_many :users, through: :carts
 
 end
