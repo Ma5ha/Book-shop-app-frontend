@@ -5,10 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.
+
+
 User.create({name: 'masha',
 email: 'blagmash@gmail.com',
 password: 'jelena99',
-confirm_password:'jelena99'}
+}
 )
 
  Book.create([{
@@ -86,3 +88,8 @@ confirm_password:'jelena99'}
     price: 14
   },]
 )
+
+Cart.create(
+  [{user_id:1,
+book_id:2},
+])
