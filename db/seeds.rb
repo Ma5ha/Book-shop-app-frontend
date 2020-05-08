@@ -8,7 +8,7 @@
  Book.create([{
     title: "Programming TypeScript: Making Your JavaScript Applications Scale",
     author:"Boris Cherny",
-    cover: ,
+    cover: 'https://images-na.ssl-images-amazon.com/images/I/511YUCKEYrL._SX379_BO1,204,203,200_.jpg',
     price:23,
 },
 {
