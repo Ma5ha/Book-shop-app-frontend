@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth'
   resources :books
+  resources :cart
   get 'book', action: :show, controller: 'books'
   
 get 'profile', action: :show, controller: 'users'
