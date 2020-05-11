@@ -29,6 +29,6 @@ export class CartComponent implements OnInit {
   }
   buy() {
     this.cartService.buy()
-      .subscribe()
+
   }
 }

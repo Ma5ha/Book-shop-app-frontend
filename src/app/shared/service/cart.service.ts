@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Book } from '@app/home/recommended-books/core';
 import { HttpClient } from '@angular/common/http';
-import { Subject } from 'rxjs';
+import { Subject, from } from 'rxjs';
 import { v4 as hashString } from 'uuid';
 
 
@@ -14,12 +14,14 @@ export class CartService {
   book: Subject<Book> = new Subject
   cartSize: Subject<number> = new Subject()
   totalCartPrice = 0
-
+  myBooks: Book[] = []
 
   constructor(private cartClient: HttpClient) {
     this.book.subscribe(book => this.cart.set(hashString(), book))
     this.book.subscribe(book => this.totalCartPrice += book.price)
 
+
+    console.log(this.myBooks)
   }
 
 
@@ -39,11 +41,18 @@ export class CartService {
 
 
   }
-  getBooksIbrought() {
-    return this.cartClient.get<[]>('http://localhost:3000/mycart')
+  getBooksIbrought(): void {
+    this.cartClient.get<Book[]>('http://localhost:3000/mycart').subscribe(x => x.forEach(x => this.myBooks.push(x)))
+
+
 
   }
-  buy() {
-    return this.cartClient.post<any>('http://localhost:3000/cart', { book_id: 5 })
+
+  t() {
+    return from([1, 2, 3, 4]).subscribe(x => { return x })
+  }
+
+  buy(): void {
+    this.cartClient.post<Book>('http://localhost:3000/cart', { book_id: 1 }).subscribe(x => this.myBooks.push(x))
   }
 }
