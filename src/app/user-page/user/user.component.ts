@@ -17,7 +17,7 @@ export class UserComponent implements OnInit {
 
 
     this.cartService.getBooksIbrought()
-
+    this.myBooks = this.cartService.myBooks
 
   }
 

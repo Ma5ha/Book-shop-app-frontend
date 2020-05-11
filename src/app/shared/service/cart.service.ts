@@ -1,8 +1,9 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Book } from '@app/home/recommended-books/core';
 import { HttpClient } from '@angular/common/http';
-import { Subject, from } from 'rxjs';
+import { Subject, from, Observable } from 'rxjs';
 import { v4 as hashString } from 'uuid';
+
 
 
 
@@ -19,7 +20,7 @@ export class CartService {
   constructor(private cartClient: HttpClient) {
     this.book.subscribe(book => this.cart.set(hashString(), book))
     this.book.subscribe(book => this.totalCartPrice += book.price)
-
+    //this.getBooksIbrought()
 
     console.log(this.myBooks)
   }
@@ -42,15 +43,29 @@ export class CartService {
 
   }
   getBooksIbrought(): void {
-    this.cartClient.get<Book[]>('http://localhost:3000/mycart').subscribe(x => x.forEach(x => this.myBooks.push(x)))
+    this.myBooks = []
+    this.cartClient.get<Book[]>('http://localhost:3000/mycart').subscribe(x => from(x).subscribe(x => this.myBooks.push(x)))
 
 
 
   }
-
-
-
   buy(): void {
-    this.cartClient.post<Book>('http://localhost:3000/cart', { book_id: 1 }).subscribe(x => this.myBooks.push(x))
+    this.cart.forEach(book => this.postRequest(book).subscribe())
+    this.cart.forEach(book => this.myBooks.push(book))
+
   }
+
+  private cartItterator(): Book[] {
+    let arrayForObservabele: Book[] = []
+    this.cart.forEach(book => arrayForObservabele.push(book))
+    return arrayForObservabele
+
+  }
+
+
+  private postRequest(book?: Book): Observable<Book> {
+    return this.cartClient.post<Book>('http://localhost:3000/cart', { book_id: book.id })
+
+  }
+
 }

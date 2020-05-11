@@ -29,6 +29,7 @@ export class CartComponent implements OnInit {
   }
   buy() {
     this.cartService.buy()
+    this.cart.clear()
 
   }
 }
