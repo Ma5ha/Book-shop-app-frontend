@@ -27,5 +27,8 @@ export class CartComponent implements OnInit {
 
     this.totalCartPrice = this.cartService.totalCartPrice
   }
-
+  buy() {
+    this.cartService.buy()
+      .subscribe()
+  }
 }
