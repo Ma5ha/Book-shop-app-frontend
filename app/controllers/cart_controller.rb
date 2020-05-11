@@ -1,16 +1,20 @@
 class CartController < ApplicationController
+ before_action :authenticate_user!
     def index
+      
         
     end
     def create
-        
-       Cart.create(book_id:params[:book_id],user_id:params[:user_id])
+         @user= current_user
+          @user.carts.create(book_id:params[:book_id])
+           
     end
-    
     def show
-        @user =User.find(params[:id])
-        @book= @user.books
-        render json: @book
+        @user= current_user
+        @cart= @user.books
+
+        render json: @cart
+        
     end
 
 end

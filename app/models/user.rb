@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
   has_many :carts
   has_many :books, through: :carts
+  has_many :lists
 end
