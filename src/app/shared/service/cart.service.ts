@@ -48,9 +48,7 @@ export class CartService {
 
   }
 
-  t() {
-    return from([1, 2, 3, 4]).subscribe(x => { return x })
-  }
+
 
   buy(): void {
     this.cartClient.post<Book>('http://localhost:3000/cart', { book_id: 1 }).subscribe(x => this.myBooks.push(x))
