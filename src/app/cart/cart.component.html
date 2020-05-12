@@ -2,6 +2,8 @@
 
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
+
+
     </button>
 </div>
 
@@ -21,8 +23,12 @@
 
 
     </ul>
+
+
+
 </div>
 <div class="modal-footer">
-    <i class="fas fa-shopping-cart"></i>total: {{myCart.price}}
-    <button (click)='buy()'>buy</button>
+    <button (click)='buy()' class="rounded-pill btn btn-outline-dark">Buy <i class="fas fa-shopping-cart"></i></button>
+    Total: <span class="badge badge-dark "> {{myCart.price}}$</span>
+
 </div>
