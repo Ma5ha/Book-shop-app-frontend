@@ -1,8 +1,10 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Book } from '@app/home/recommended-books/core';
 import { HttpClient } from '@angular/common/http';
-import { Subject, from, Observable } from 'rxjs';
+
 import { v4 as hashString } from 'uuid';
+import { myCart } from '@app/core/myCart';
+import { myBooks } from '@app/core/myBooks';
 
 
 
@@ -14,10 +16,10 @@ export class CartService {
 
 
 
-  myBooks = {
+  myBooks: myBooks = {
     items: []
   }
-  myCart = {
+  myCart: myCart = {
     items: new Map<string, Book>(),
     size: 0,
     price: 0
