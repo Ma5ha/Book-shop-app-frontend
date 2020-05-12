@@ -28,3 +28,23 @@
         opacity: 1;
     }
 }
+
+.body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "sidebar content content content" "sidebar content content content" "sidebar content content content";
+}
+
+.sidebar {
+    grid-area: sidebar;
+    min-height: 100vh;
+}
+
+.content {
+    min-height: 100vh;
+    grid-area: content;
+}
