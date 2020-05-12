@@ -9,7 +9,7 @@ import { Book } from '@app/home/recommended-books/core/book';
 })
 export class UserComponent implements OnInit {
 
-  myBooks: Book[] = this.cartService.myBooks
+  myBooks = this.cartService.myBooks
 
   constructor(private cartService: CartService) { }
 
@@ -17,7 +17,7 @@ export class UserComponent implements OnInit {
 
 
     this.cartService.getBooksIbrought()
-    this.myBooks = this.cartService.myBooks
+
 
   }
 

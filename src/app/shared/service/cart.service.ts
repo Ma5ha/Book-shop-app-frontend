@@ -11,15 +11,20 @@ import { v4 as hashString } from 'uuid';
   providedIn: 'root'
 })
 export class CartService {
-  cart: Map<string, Book> = new Map<string, Book>()
-  book: Subject<Book> = new Subject
-  cartSize: Subject<number> = new Subject()
-  totalCartPrice = 0
-  myBooks: Book[] = []
+
+
+
+  myBooks = {
+    items: []
+  }
+  myCart = {
+    items: new Map<string, Book>(),
+    size: 0,
+    price: 0
+  }
 
   constructor(private cartClient: HttpClient) {
-    this.book.subscribe(book => this.cart.set(hashString(), book))
-    this.book.subscribe(book => this.totalCartPrice += book.price)
+
     //this.getBooksIbrought()
 
     console.log(this.myBooks)
@@ -28,43 +33,55 @@ export class CartService {
 
   addBook(book?: Book): void {
 
-    this.book.next(book)
-    this.cartSize.next(this.cart.size)
 
 
+    this.myCart.items.set(hashString(), book)
 
+    this.priceUpdate()
+    this.sizeUpdate()
   }
 
 
   removeBook(index: string): void {
-    this.cart.delete(index)
-    this.cartSize.next(this.cart.size)
 
+
+    this.myCart.items.delete(index)
+
+    this.priceUpdate()
+    this.sizeUpdate()
 
   }
-  getBooksIbrought(): void {
-    this.myBooks = []
-    this.cartClient.get<Book[]>('http://localhost:3000/mycart').subscribe(x => from(x).subscribe(x => this.myBooks.push(x)))
+  private sizeUpdate() {
+    this.myCart.size = this.myCart.items.size
+  }
 
+  private priceUpdate(): void {
+    this.myCart.price = 0
+    this.myCart.items.forEach(book => this.myCart.price = this.myCart.price + book.price)
+  }
+  getBooksIbrought(): void {
+
+    this.cartClient.get<Book[]>('http://localhost:3000/mycart').subscribe(x => this.myBooks.items = x)
 
 
   }
   buy(): void {
-    this.cart.forEach(book => this.postRequest(book).subscribe())
-    this.cart.forEach(book => this.myBooks.push(book))
-
+    // this.cart.forEach(book => this.postRequest(book).subscribe())
+    //this.cart.forEach(book => this.myBooks.push(book))
+    this.cartItterator()
   }
 
-  private cartItterator(): Book[] {
-    let arrayForObservabele: Book[] = []
-    this.cart.forEach(book => arrayForObservabele.push(book))
-    return arrayForObservabele
-
+  private cartItterator() {
+    this.myCart.items.forEach(book => this.postRequest(book))
+    this.myCart.items.forEach(book => this.myBooks.items.push(book))
+    this.myCart.items.clear()
+    this.priceUpdate()
   }
 
 
-  private postRequest(book?: Book): Observable<Book> {
-    return this.cartClient.post<Book>('http://localhost:3000/cart', { book_id: book.id })
+  private postRequest(book?: Book): void {
+
+    this.cartClient.post<Book>('http://localhost:3000/cart', { book_id: book.id }).subscribe()
 
   }
 

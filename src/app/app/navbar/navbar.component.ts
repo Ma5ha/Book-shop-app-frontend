@@ -36,14 +36,14 @@ export class NavbarComponent implements OnInit {
   public model: any;
 
 
-  cart: number = 0
+  cart = this.cartService.myCart
   constructor(private AngularTokenService: AngularTokenService, private bookService: BookService, private modalService: NgbModal,
     private cartService: CartService) {
 
   }
   ngOnInit(): void {
     this.bookService.getTop5Books().subscribe(x => this.books = x)
-    this.cartService.cartSize.subscribe(cartSize => this.cart = cartSize)
+
   }
   open(): void {
     const modalRef = this.modalService.open(CartComponent, { centered: true, scrollable: true, size: 'lg' });

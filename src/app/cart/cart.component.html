@@ -11,7 +11,7 @@
 <div class="modal-body">
     <ul>
 
-        <li *ngFor='let item of cart |keyvalue' (click)='removeBookFromCart(item.key)' data-toggle="tooltip"
+        <li *ngFor='let item of myCart.items |keyvalue' (click)='removeBookFromCart(item.key)' data-toggle="tooltip"
             data-placement="top" title="REMOVE FROM CART">
             <img src={{item.value.cover}}>
             <h4>{{item.value.title}} </h4>
@@ -23,6 +23,6 @@
     </ul>
 </div>
 <div class="modal-footer">
-    <i class="fas fa-shopping-cart"></i>total: {{totalCartPrice}}
+    <i class="fas fa-shopping-cart"></i>total: {{myCart.price}}
     <button (click)='buy()'>buy</button>
 </div>
