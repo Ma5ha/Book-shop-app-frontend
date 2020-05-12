@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '@app/shared/service/cart.service';
-import { Book } from '@app/home/recommended-books/core/book';
 
+import { myBooks } from '@app/core/myBooks';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -9,7 +9,7 @@ import { Book } from '@app/home/recommended-books/core/book';
 })
 export class UserComponent implements OnInit {
 
-  myBooks = this.cartService.myBooks
+  myBooks: myBooks = this.cartService.myBooks
 
   constructor(private cartService: CartService) { }
 

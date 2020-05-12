@@ -78,6 +78,7 @@ export class CartService {
     this.myCart.items.forEach(book => this.myBooks.items.push(book))
     this.myCart.items.clear()
     this.priceUpdate()
+    this.sizeUpdate()
   }
 
 

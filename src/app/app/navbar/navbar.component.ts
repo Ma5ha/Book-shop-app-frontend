@@ -8,6 +8,7 @@ import { BookService } from '@app/shared/service/book.service'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CartComponent } from '@app/cart/cart.component'
 import { CartService } from '@app/shared/service/cart.service';
+import { myCart } from '@app/core/myCart';
 
 
 @Component({
@@ -36,7 +37,7 @@ export class NavbarComponent implements OnInit {
   public model: any;
 
 
-  cart = this.cartService.myCart
+  cart: myCart = this.cartService.myCart
   constructor(private AngularTokenService: AngularTokenService, private bookService: BookService, private modalService: NgbModal,
     private cartService: CartService) {
 
