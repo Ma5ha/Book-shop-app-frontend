@@ -14,7 +14,7 @@
     <ul>
 
         <li *ngFor='let item of myCart.items |keyvalue' (click)='removeBookFromCart(item.key)' data-toggle="tooltip"
-            data-placement="top" title="REMOVE FROM CART">
+            data-placement="top" title="REMOVE FROM CART" [ngClass]="{'scale-out-top':anime===item.key}">
             <img src={{item.value.cover}}>
             <h4>{{item.value.title}} </h4>
             <h6>price:{{item.value.price}}</h6>

@@ -17,13 +17,19 @@ export class CartComponent implements OnInit {
 
 
   }
+  anime: string
 
   removeBookFromCart(index: string): void {
-    this.cartService.removeBook(index)
+    this.anime = index
+
+    setTimeout(() => {
+      this.cartService.removeBook(index)
+    }, 1000)
   }
   buy() {
     this.cartService.buy()
 
 
   }
+
 }

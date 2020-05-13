@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Book } from '@app/home/recommended-books/core';
 import { HttpClient } from '@angular/common/http';
 
