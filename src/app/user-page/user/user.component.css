@@ -35,7 +35,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 1px 1px;
+    gap: 3px 3px;
     grid-template-areas: "sidebar content content content" "sidebar content content content" "sidebar content content content";
 }
 
@@ -47,4 +47,27 @@
 .content {
     min-height: 100vh;
     grid-area: content;
+}
+
+.sidebar span {
+    position: fixed;
+    bottom: 0px;
+    left: 100px
+}
+
+.sidebar span button {
+    float: right;
+}
+
+.sidebar ul {}
+
+li:hover, li.active {
+    background-color: black;
+    color: white;
+}
+
+.sidebar {
+    -webkit-box-shadow: 10px 4px 8px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 4px 8px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 4px 8px -6px rgba(0, 0, 0, 0.75);
 }
