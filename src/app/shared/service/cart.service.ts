@@ -9,6 +9,7 @@ import { myBooks } from '@app/core/myBooks';
 
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -71,20 +72,24 @@ export class CartService {
     // this.cart.forEach(book => this.postRequest(book).subscribe())
     //this.cart.forEach(book => this.myBooks.push(book))
     this.cartItterator()
-  }
-
-  private cartItterator() {
-    this.myCart.items.forEach(book => this.postRequest(book))
-    this.myCart.items.forEach(book => this.myBooks.items.push(book))
     this.myCart.items.clear()
     this.priceUpdate()
     this.sizeUpdate()
   }
 
+  private cartItterator() {
+    let array = []
+    this.myCart.items.forEach(book => array.push({ book_id: book.id }))
+    this.myCart.items.forEach(book => this.myBooks.items.push(book))
+    this.postRequest(array)
 
-  private postRequest(book?: Book): void {
 
-    this.cartClient.post<Book>('http://localhost:3000/cart', { book_id: book.id }).subscribe()
+  }
+
+
+  private postRequest(book?: any[]): void {
+
+    this.cartClient.post<Book>('http://localhost:3000/cart', { cart: book }).subscribe(x => console.log(x))
 
   }
 
