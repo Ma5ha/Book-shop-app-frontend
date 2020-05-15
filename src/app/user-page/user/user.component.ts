@@ -8,7 +8,7 @@ import { myBooks } from '@app/core/myBooks';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
+  active: string = ''
   myBooks: myBooks = this.cartService.myBooks
 
   constructor(private cartService: CartService) { }
@@ -19,13 +19,13 @@ export class UserComponent implements OnInit {
     this.cartService.getBooksIbrought()
 
 
-  }
-
-  my() {
-    return this.cartService.getBooksIbrought()
-
 
   }
 
+
+  toggle(activate: string) {
+    this.active = activate
+
+  }
 
 }
