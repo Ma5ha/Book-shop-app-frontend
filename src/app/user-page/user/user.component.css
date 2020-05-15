@@ -52,7 +52,7 @@
 .sidebar span {
     position: fixed;
     bottom: 0px;
-    left: 100px
+    right: 10px;
 }
 
 .sidebar span button {
@@ -73,4 +73,40 @@ li:hover, li.active {
 li.active {
     background-color: black;
     color: white;
+}
+
+span .dropdown-toggle.fas.fa-plus {
+    width: 80px;
+    padding: 30px !important;
+    background: #ff9700;
+    opacity: 1;
+    color: #fff;
+    padding: 15px 20px 11px;
+    font-size: 14px;
+    border: 2px solid #ff9700;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    outline: none;
+}
+
+span .dropdown-toggle.fas.fa-plus:hover {
+    background: #fff;
+    color: #ff9700;
+    outline: none;
+}
+
+.dropdown-menu button {
+    border-radius: 10px 160px 160px 10px;
+    -moz-border-radius: 10px 160px 160px 10px;
+    -webkit-border-radius: 10px 160px 160px 10px;
+}
+
+span .input-group-append {
+    margin: 20px;
+    width: 200px;
+}
+
+.dropdown-menu {
+    border-style: none;
 }

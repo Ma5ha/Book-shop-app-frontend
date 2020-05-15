@@ -29,7 +29,7 @@ import { AboutComponent } from './about/about.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
 import { FlashComponent } from './shared/flash/flash.component';
-import { NgbAlertModule, NgbTypeaheadModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertModule, NgbTypeaheadModule, NgbModalModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FlashmessageService } from '@app/shared/service/flashmessage.service';
 import { ProductComponent } from './product/product.component';
@@ -62,6 +62,7 @@ import { CartComponent } from './cart/cart.component';
 
   ],
   imports: [
+    NgbDropdownModule,
     NgbModalModule,
     NgbTypeaheadModule,
     NgbAlertModule,

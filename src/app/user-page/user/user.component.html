@@ -5,8 +5,26 @@
             <li class="list-group-item active" [ngClass]="{'active':active ==='myBooks'}">MyBooks</li>
 
         </ul>
+
+
+
         <span>
-            <button type="button" class="btn btn-primary btn-lg">Large button</button>
+            <div class="col text-right">
+                <div ngbDropdown placement="top-right" class="d-inline-block col-md-4">
+                    <button class="fas fa-plus" id="dropdownBasic2" ngbDropdownToggle></button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+                        <div class="input-group-append">
+                            <input type="text" class="form-control" placeholder="Enter List name" aria-label="Username"
+                                aria-describedby="basic-addon1" [(ngModel)]='list'>
+                            <button class="fas fa-check-circle btn btn-dark" (click)="createList()"></button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
         </span>
 
     </div>

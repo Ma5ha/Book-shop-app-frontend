@@ -10,7 +10,7 @@ import { myBooks } from '@app/core/myBooks';
 export class UserComponent implements OnInit {
   active: string = ''
   myBooks: myBooks = this.cartService.myBooks
-
+  list: string
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
@@ -28,4 +28,7 @@ export class UserComponent implements OnInit {
 
   }
 
+  createList() {
+    this.list = ''
+  }
 }
