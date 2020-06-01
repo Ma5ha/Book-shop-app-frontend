@@ -2,8 +2,13 @@
 
     <div class='sidebar'>
         <ul class="list-group">
-            <li class="list-group-item active" [ngClass]="{'active':active ==='myBooks'}">MyBooks</li>
-
+            <li class="list-group-item " [ngClass]="{'active':active ==='myBooks'}" (click)="broughtBooks()">MyBooks
+            </li>
+            <li class="list-group-item " *ngFor='let list of myLists' [ngClass]="{'active':active ===list.id}"
+                (click)="toggle(list.id)">
+                {{list.name}}
+                <i class="fas fa-trash" (click)="deleteList(list)"> </i>
+            </li>
         </ul>
 
 
@@ -31,7 +36,7 @@
 
     <div class="content">
         <div class="row row-cols-1 row-cols-md-3">
-            <div class="col mb-4" *ngFor='let book of myBooks.items'>
+            <div class="col mb-4" *ngFor='let book of activeList.items'>
                 <div class="card">
                     <img src={{book.cover}} class="card-img-top" alt='' style="width: 100px;">
                     <div class="card-body">

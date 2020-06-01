@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
+import { Book } from '@app/home/recommended-books/core/book';
 
 
 interface list {
@@ -22,11 +23,20 @@ export class ListService {
   }
 
   post(list_name: string): Observable<list> {
-    return this.listClient.post<list>('localhost/3000/list', { list: { name: list_name } })
+    return this.listClient.post<list>('http://localhost:3000/list', { list: { name: list_name } })
   }
   get(): Observable<list[]> {
 
-    return this.listClient.get<list[]>('localhost/3000/list')
+    return this.listClient.get<list[]>('http://localhost:3000/list')
+  }
+
+  getListBooks(id: string): Observable<Book[]> {
+    return this.listClient.get<Book[]>('http://localhost:3000/myLists', { params: { 'id': id } })
+
+  }
+  delete(id: string) {
+    return this.listClient.get<Book[]>('http://localhost:3000/myLists', { params: { 'id': id } })
+
   }
 }
 
