@@ -94,3 +94,7 @@ export class CartService {
   }
 
 }
+export interface cartItem {
+  item: Book,
+  inCart: number
+}
