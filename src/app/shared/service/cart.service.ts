@@ -21,7 +21,7 @@ export class CartService {
     items: []
   }
   myCart: myCart = {
-    items: new Map<string, Book>(),
+    items: new Map<string, cartItem>(),
     size: 0,
     price: 0
   }
@@ -37,11 +37,23 @@ export class CartService {
   addBook(book?: Book): void {
 
 
+    let cartItem = this.warpItem(book)
 
-    this.myCart.items.set(hashString(), book)
 
-    this.priceUpdate()
-    this.sizeUpdate()
+    if (this.isInCart(cartItem)) {
+
+
+      this.updateItem(cartItem)
+    } else {
+
+      this.myCart.items.set(hashString(), cartItem)
+      this.priceUpdate()
+      this.sizeUpdate()
+    }
+
+
+
+
   }
 
 
@@ -60,7 +72,8 @@ export class CartService {
 
   private priceUpdate(): void {
     this.myCart.price = 0
-    this.myCart.items.forEach(book => this.myCart.price = this.myCart.price + book.price)
+    this.myCart.items.forEach(cartItem => this.myCart.price = this.myCart.price + cartItem.item.price * cartItem.inCart)
+    console.log(this.myCart.price)
   }
   getBooksIbrought(): void {
 
@@ -93,8 +106,38 @@ export class CartService {
 
   }
 
+  private warpItem(book: Book): cartItem {
+
+    return {
+      item: book,
+      inCart: 1
+    }
+  }
+
+  private isInCart(cartItem: cartItem) {
+    let arrayCart = []
+    this.myCart.items.forEach(element => arrayCart.push(element))
+
+    return arrayCart.some(element => element.item === cartItem.item)
+
+  }
+  private updateItem(cartItem?) {
+    this.myCart.items.forEach(cartI => {
+
+      if (cartI.item === cartItem.item) { cartI.inCart++ }
+      console.log(cartI.inCart)
+      this.priceUpdate()
+      this.sizeUpdate()
+    })
+
+
+  }
+
+
 }
+
+
 export interface cartItem {
-  item: Book,
+  item: Book
   inCart: number
 }
