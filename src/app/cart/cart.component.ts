@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal, private cartService: CartService) { }
 
   ngOnInit(): void {
-
+    console.log(this.myCart)
 
   }
   anime: string
