@@ -1,3 +1,9 @@
 .container {
     padding: 10px
 }
+
+.card:hover {
+    background-color: #fcba68;
+    cursor: pointer;
+    opacity: 0.9;
+}
