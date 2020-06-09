@@ -36,14 +36,16 @@ export class NavbarComponent implements OnInit {
 
   public model: any;
 
+  books: Book[]
 
   cart: myCart = this.cartService.myCart
+
   constructor(private AngularTokenService: AngularTokenService, private bookService: BookService, private modalService: NgbModal,
     private cartService: CartService) {
 
   }
   ngOnInit(): void {
-    this.bookService.getTop5Books().subscribe(x => this.books = x)
+
 
   }
   open(): void {
@@ -61,7 +63,6 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  books: Book[]
 
 
   search = (text$: Observable<string>) =>
@@ -73,6 +74,8 @@ export class NavbarComponent implements OnInit {
 
   formatter = (x: { title: string }) => x.title;
 
-
+  bookSuggest() {
+    this.bookService.getAllBooks().subscribe(x => this.books = x)
+  }
 
 }

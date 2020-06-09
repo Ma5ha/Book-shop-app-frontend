@@ -14,9 +14,14 @@ export class BookService {
 
   }
   getTop5Books(): Observable<any> {
-    return this.bookClient.get(environment.bookPath)
+    return this.bookClient.get('http://localhost:3000/top5Books')
 
   }
+  getAllBooks(): Observable<Book[]> {
+    return this.bookClient.get<Book[]>('http://localhost:3000/books')
+  }
+
+
   getBook(id: string) {
     return this.bookClient.get('http://localhost:3000/book', {
       params: { id: id }
