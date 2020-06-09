@@ -9,6 +9,8 @@ import { AboutComponent } from './about/about.component'
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component'
 import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component'
 import { ProductComponent } from './product/product.component'
+import { ShowAllBookSComponent } from './show-all-book-s/show-all-book-s.component'
+
 const routes: Routes = [{
   path: 'product/:id',
   component: ProductComponent,
@@ -73,6 +75,10 @@ const routes: Routes = [{
     },
 
   ]
+},
+{
+  path: 'allBooks',
+  component: ShowAllBookSComponent
 }
 
 ];
