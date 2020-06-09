@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get 'book', action: :show, controller: 'books'
   get 'mycart', action: :show , controller:'cart'
 get 'profile', action: :show, controller: 'users'
+get 'myLists', action: :show, controller: 'list'
+get 'top5Books', action: :top5Books, controller: 'books'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

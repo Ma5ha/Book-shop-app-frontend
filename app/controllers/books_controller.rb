@@ -15,4 +15,8 @@ class BooksController < ApplicationController
 
         render json: @book
     end
+    def top5Books
+        @book = Book.find([1,5,12,7])
+        render json: @book
+    end
 end

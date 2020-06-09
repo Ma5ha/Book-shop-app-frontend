@@ -6,8 +6,10 @@ class CartController < ApplicationController
     end
     def create
          @user= current_user
-          @user.carts.create(book_id:params[:book_id])
-           
+         @cart= @user.carts.create(book_params)
+
+         render json: @cart
+        
     end
     def show
         @user= current_user
@@ -15,6 +17,12 @@ class CartController < ApplicationController
 
         render json: @cart
         
+    end
+    private
+
+    def book_params
+        params.permit(cart:[:book_id])
+        .require(:cart)
     end
 
 end

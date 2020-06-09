@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
   has_many :carts
   has_many :books, through: :carts
   has_many :lists
+  accepts_nested_attributes_for :carts
 end
