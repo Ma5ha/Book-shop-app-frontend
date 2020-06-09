@@ -34,6 +34,7 @@ import { NgbAlertModule, NgbTypeaheadModule, NgbModalModule, NgbDropdownModule }
 import { FlashmessageService } from '@app/shared/service/flashmessage.service';
 import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
+import { ShowAllBookSComponent } from './show-all-book-s/show-all-book-s.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { CartComponent } from './cart/cart.component';
     FlashComponent,
     ProductComponent,
     CartComponent,
+    ShowAllBookSComponent,
 
 
   ],
