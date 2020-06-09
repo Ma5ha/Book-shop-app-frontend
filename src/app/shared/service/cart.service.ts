@@ -70,7 +70,7 @@ export class CartService {
     this.myCart.size = this.myCart.items.size
   }
 
-  private priceUpdate(): void {
+  priceUpdate(): void {
     this.myCart.price = 0
     this.myCart.items.forEach(cartItem => this.myCart.price = this.myCart.price + cartItem.item.price * cartItem.inCart)
     console.log(this.myCart.price)

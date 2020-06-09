@@ -226,3 +226,18 @@ h6 {
         opacity: 1;
     }
 }
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+    display: inline;
+}
+
+.next {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.round {
+    border-radius: 50%;
+}

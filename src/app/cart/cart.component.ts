@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { CartService } from '@app/shared/service/cart.service'
 import { Book } from '@app/home/recommended-books/core';
+import { isNgTemplate, ThrowStmt } from '@angular/compiler';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -29,6 +30,19 @@ export class CartComponent implements OnInit {
   buy() {
     this.cartService.buy()
 
+
+  }
+  increase(item) {
+
+    item.inCart++
+
+    this.cartService.priceUpdate()
+  }
+
+  decrease(item) {
+    if (item.inCart <= 1) return
+    item.inCart--
+    this.cartService.priceUpdate()
 
   }
 
