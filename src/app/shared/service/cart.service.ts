@@ -92,8 +92,14 @@ export class CartService {
 
   private cartItterator() {
     let array = []
-    this.myCart.items.forEach(book => array.push({ book_id: book.id }))
-    this.myCart.items.forEach(book => this.myBooks.items.push(book))
+    this.myCart.items.forEach(cartItem => {
+      console.log(cartItem)
+      for (; cartItem.inCart !== 0; cartItem.inCart--)
+        array.push({ book_id: cartItem.item.id })
+      console.log(array)
+    }
+    )
+    this.myCart.items.forEach(cartItem => this.myBooks.items.push(cartItem.item))
     this.postRequest(array)
 
 
