@@ -7,7 +7,7 @@
             <li class="list-group-item " *ngFor='let list of myLists' [ngClass]="{'active':active ===list.id}"
                 (click)="toggle(list.id)">
                 {{list.name}}
-                <i class="fas fa-trash" (click)="deleteList(list)"> </i>
+                <i class="fas fa-trash" (click)="deleteList(list.id)"> </i>
             </li>
         </ul>
 

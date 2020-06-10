@@ -24,7 +24,7 @@ export class UserComponent implements OnInit {
 
     this.broughtBooks()
 
-    this.listService.get().subscribe(x => this.myLists = x)
+    this.listService.get().subscribe(x => { this.myLists = x; console.log(this.myLists) })
 
 
 
@@ -54,9 +54,8 @@ export class UserComponent implements OnInit {
     this.listService.get().subscribe(lists => this.myLists = lists)
   }
   deleteList(id) {
-    let param = id.toString()
-    this.listService.delete(param).subscribe()
-    this.myLists.forEach(list => list === id ? this.myLists.splice(list) : list)
+    let param = id
+    this.listService.delete(param).subscribe(() => this.getMylist())
     console.log(id)
   }
 
