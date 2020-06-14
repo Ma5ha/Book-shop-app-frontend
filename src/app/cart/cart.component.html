@@ -17,9 +17,12 @@
             title="REMOVE FROM CART" [ngClass]="{'scale-out-top':anime===cartItem.key}">
             <img src={{cartItem.value.item.cover}}>
             <h4>{{cartItem.value.item.title}} </h4>
-            <h6>size:{{cartItem.value.inCart}}
-                <button class="previous round" (click)='increase(cartItem.value)'>&#8249;</button>
-                <button class="next round" (click)='decrease(cartItem.value)'>&#8250;</button></h6>
+            <h6> <span>size:{{cartItem.value.inCart}}</span>
+                <div class="buttons">
+                    <button class="previous round" (click)='increase(cartItem.value)'>&#8249;</button>
+                    <button class="next round" (click)='decrease(cartItem.value)'>&#8250;</button>
+                </div>
+            </h6>
             <i class="fas fa-window-close" (click)='removeBookFromCart(cartItem.key)'></i>
         </li>
 
