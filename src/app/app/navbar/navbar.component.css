@@ -36,6 +36,7 @@ input {
   animation-name: hover-nav-link;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+  float: left;
 }
 
 @keyframes hover-nav-link {
@@ -108,4 +109,19 @@ input {
   color: #fff;
   padding: 1px 0;
   right: 205px;
+}
+
+a {
+  margin-right: 10px;
+}
+
+.cart span {
+  margin-right: 10px;
+}
+
+.fa.fa-search {
+  color: red;
+  float: right;
+  position: relative;
+  z-index: 2;
 }
