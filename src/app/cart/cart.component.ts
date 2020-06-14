@@ -28,6 +28,7 @@ export class CartComponent implements OnInit {
     }, 1000)
   }
   buy() {
+    if (!confirm('Are you sure, you want to buy items in your cart?')) return;
     this.cartService.buy()
 
 
