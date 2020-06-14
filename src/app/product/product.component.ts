@@ -37,6 +37,12 @@ export class ProductComponent implements OnInit {
 
 
   }
+  buy() {
+    this.cartService.addBook(this.book)
+    this.cartService.buy()
+
+
+  }
 
 }
 
