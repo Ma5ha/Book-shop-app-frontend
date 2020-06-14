@@ -1,8 +1,10 @@
 class ListController < ApplicationController
-    before_action :authenticate_user!
+   before_action :authenticate_user!
     def index
+        
         @list= current_user.lists
       #@list= User.first.lists
+       # @myLists=[{name: 'Brought books', id:'mycart'}].concat(@list)
         render json: @list
     end
     def show
@@ -21,7 +23,7 @@ class ListController < ApplicationController
         render json: @list
     end
     def destroy
-        @list=List.find(id:params[:id])
+        @list=current_user.lists.find(params[:id])
         @list.destroy
 
     end
