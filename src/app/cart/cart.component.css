@@ -241,3 +241,15 @@ h6 {
 .round {
     border-radius: 50%;
 }
+
+button.round {
+    display: inline;
+    transform: rotate(90deg);
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
+
+.next.round {
+    float: right;
+}

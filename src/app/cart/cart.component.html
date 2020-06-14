@@ -18,8 +18,8 @@
             <img src={{cartItem.value.item.cover}}>
             <h4>{{cartItem.value.item.title}} </h4>
             <h6>size:{{cartItem.value.inCart}}
-                <button class="previous round" (click)='decrease(cartItem.value)'>&#8249;</button>
-                <button class="next round" (click)='increase(cartItem.value)'>&#8250;</button></h6>
+                <button class="previous round" (click)='increase(cartItem.value)'>&#8249;</button>
+                <button class="next round" (click)='decrease(cartItem.value)'>&#8250;</button></h6>
             <i class="fas fa-window-close" (click)='removeBookFromCart(cartItem.key)'></i>
         </li>
 
