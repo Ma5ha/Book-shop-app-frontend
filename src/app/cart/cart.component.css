@@ -28,10 +28,11 @@ h4 {
 }
 
 .modal-body i {
-    margin: 2rem;
     width: 10px;
     display: block;
     align-self: center;
+    position: relative;
+    top: 35%;
 }
 
 h6 {
