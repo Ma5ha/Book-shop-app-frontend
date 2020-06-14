@@ -13,8 +13,7 @@
 <div class="modal-body">
     <ul>
 
-        <li *ngFor='let cartItem of myCart.items |keyvalue' data-toggle="tooltip" data-placement="top"
-            title="REMOVE FROM CART" [ngClass]="{'scale-out-top':anime===cartItem.key}">
+        <li *ngFor='let cartItem of myCart.items |keyvalue' [ngClass]="{'scale-out-top':anime===cartItem.key}">
             <img src={{cartItem.value.item.cover}}>
             <h4>{{cartItem.value.item.title}} </h4>
             <h6> <span>size:{{cartItem.value.inCart}}</span>
@@ -24,7 +23,8 @@
                 </div>
             </h6>
             <div>
-                <i class="fas fa-window-close" (click)='removeBookFromCart(cartItem.key)'></i>
+                <i class="fas fa-window-close" (click)='removeBookFromCart(cartItem.key)' data-toggle="tooltip"
+                    data-placement="top" title="REMOVE FROM CART"></i>
             </div>
         </li>
 
