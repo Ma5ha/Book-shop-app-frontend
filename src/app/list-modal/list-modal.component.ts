@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { ListService } from '@app/shared/list.service'
+
 
 @Component({
   selector: 'app-list-modal',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListModalComponent implements OnInit {
 
-  constructor() { }
+  MyLists
+
+  constructor(public actioveModal: NgbActiveModal, private service: ListService) { }
 
   ngOnInit(): void {
+    this.service.get().subscribe(lists => this.MyLists = lists)
   }
 
 }

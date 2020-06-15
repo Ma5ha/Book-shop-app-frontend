@@ -1,8 +1,10 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { BookService } from '@app/shared/service/book.service'
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, } from '@angular/router';
 import { CartService } from '@app/shared/service/cart.service'
 import { Book } from '@app/home/recommended-books/core';
+import { NgbModal, } from '@ng-bootstrap/ng-bootstrap';
+import { ListModalComponent } from '@app/list-modal/list-modal.component';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -10,7 +12,10 @@ import { Book } from '@app/home/recommended-books/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private bookService: BookService, private route: ActivatedRoute, private cartService: CartService
+  constructor(private bookService: BookService,
+    private route: ActivatedRoute,
+    private cartService: CartService,
+    private modalService: NgbModal
   ) {
 
   }
@@ -44,6 +49,7 @@ export class ProductComponent implements OnInit {
 
   }
   addToList() {
+    const modalRef = this.modalService.open(ListModalComponent);
 
   }
 

@@ -1,1 +1,8 @@
-<p>list-modal works!</p>
+<div *ngIf='MyLists'>
+    <ul>
+        <li *ngFor='let list of MyLists'>
+
+            {{list.name}}
+        </li>
+    </ul>
+</div>
