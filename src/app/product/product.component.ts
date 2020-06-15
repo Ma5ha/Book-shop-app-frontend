@@ -43,6 +43,9 @@ export class ProductComponent implements OnInit {
 
 
   }
+  addToList() {
+
+  }
 
 }
 
