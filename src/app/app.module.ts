@@ -35,6 +35,7 @@ import { FlashmessageService } from '@app/shared/service/flashmessage.service';
 import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
 import { ShowAllBookSComponent } from './show-all-book-s/show-all-book-s.component';
+import { ListModalComponent } from './list-modal/list-modal.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { ShowAllBookSComponent } from './show-all-book-s/show-all-book-s.compone
     ProductComponent,
     CartComponent,
     ShowAllBookSComponent,
+    ListModalComponent,
 
 
   ],
