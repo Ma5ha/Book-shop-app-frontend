@@ -5,7 +5,7 @@ import { myBooks } from '@app/core/myBooks';
 
 
 import { ListService } from '@app/shared/list.service'
-import { Book } from '@app/home/recommended-books/core';
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -24,7 +24,7 @@ export class UserComponent implements OnInit {
 
     this.broughtBooks()
 
-    this.listService.get().subscribe(x => { this.myLists = x; console.log(this.myLists) })
+    this.listService.get().subscribe(x => { this.myLists = x; })
 
 
 
@@ -34,14 +34,21 @@ export class UserComponent implements OnInit {
   broughtBooks(): void {
     this.cartService.getBooksIbrought()
     this.active = 'myBooks'
-    this.activeList = this.myBooks
+    this.activeList = this.myBooks.items
   }
 
   toggle(activate: string | number) {
     this.active = activate
     let param = activate.toString()
-    this.activeList = []
-    this.listService.getListBooks(param).subscribe(x => this.activeList = x)
+
+
+    // this.listService.getListBooks(param).subscribe(x => this.activeList = x)
+    this.listService.getList(param).subscribe(x => {
+      this.activeList = x
+
+
+      console.log(this.activeList)
+    })
 
 
   }

@@ -38,5 +38,10 @@ export class ListService {
     return this.listClient.delete(`http://localhost:3000/list/${id}`)
 
   }
+
+  getList(id) {
+    return this.listClient.get<Book[]>(`http://localhost:3000/list/${id}`,)
+  }
+
 }
 
