@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_10_084223) do
+ActiveRecord::Schema.define(version: 2020_06_15_102720) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -28,6 +28,33 @@ ActiveRecord::Schema.define(version: 2020_05_10_084223) do
     t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_carts_on_book_id"
     t.index ["user_id"], name: "index_carts_on_user_id"
+  end
+
+  create_table "containers", force: :cascade do |t|
+    t.integer "list_id"
+    t.integer "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_containers_on_book_id"
+    t.index ["list_id"], name: "index_containers_on_list_id"
+  end
+
+  create_table "containters", force: :cascade do |t|
+    t.integer "list_id"
+    t.integer "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_containters_on_book_id"
+    t.index ["list_id"], name: "index_containters_on_list_id"
+  end
+
+  create_table "list_books", force: :cascade do |t|
+    t.integer "list_id"
+    t.integer "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_list_books_on_book_id"
+    t.index ["list_id"], name: "index_list_books_on_list_id"
   end
 
   create_table "lists", force: :cascade do |t|

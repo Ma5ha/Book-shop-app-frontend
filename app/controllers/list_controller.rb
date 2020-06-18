@@ -1,5 +1,5 @@
 class ListController < ApplicationController
-   before_action :authenticate_user!
+  # before_action :authenticate_user!
     def index
         
         @list= current_user.lists
@@ -9,7 +9,9 @@ class ListController < ApplicationController
     end
     def show
 
-        
+        list = List.find(params[:id])
+        @books= list.books
+        render json: @books
        
 
     end
@@ -27,4 +29,5 @@ class ListController < ApplicationController
         @list.destroy
 
     end
+    
 end
